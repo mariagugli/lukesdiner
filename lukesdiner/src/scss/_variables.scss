@@ -1,0 +1,101 @@
+/* Main colors */
+$navy: #062343;
+$navy__light: #7CB5F3;
+$navy__lighter: #DAEAFC;
+$navy__dark: #031425;
+$navy__darker: #020A13;
+$yellow: #FFB717;
+$yellow__light: #FFD370;
+$yellow__lighter: #FFF2D6;
+$yellow__dark: #CC8D00;
+$yellow__darker: #704D00;
+$turquoise: #1AA58C;
+$turquoise__light: #84ECD9;
+$turquoise__lighter: #DCF9F4;
+$turquoise__dark: #127361;
+$turquoise__darker: #0A3E34;
+$grayblue: #7F9EB2;
+$grayblue__light: #A6BBC9;
+$grayblue__lighter: #E6ECF0;
+$grayblue__dark: #4D6B7F;
+$grayblue__darker: #2A3B46;
+
+/* Gray scale */
+$white: white;
+$gray__light: #F9F9F9;
+$gray: #EDEDED;
+$gray__dark: #A2A1A1;
+$gray__darker: #313131;
+$black: black;
+
+/* Alert colors */
+$alert__green: #6BCC5B;
+$alert__green__light: #9DDD92;
+$alert__green__lighter: #E3F5E0;
+$alert__green__dark: #409C30;
+$alert__green__darker: #23561B;
+$alert__red: #D63C3C;
+$alert__red__light: #E68989;
+$alert__red__lighter: #F8DDDD;
+$alert__red__dark: #A92323;
+$alert__red__darker: #5D1313;
+$alert__yellow: #F7CE3D;
+$alert__yellow__light: #F9DC76;
+$alert__yellow__lighter: #FDF5D8;
+$alert__yellow__dark: #C49B08;
+$alert__yellow__darker: #6C5504;
+$alert__blue: #637ED3;
+$alert__blue__light: #90A3DF;
+$alert__blue__lighter: #DFE5F6;
+$alert__blue__dark: #2D489F;
+$alert__blue__darker: #192857;
+
+$color-list: (
+    'navy': $navy,
+    'yellow': $yellow,
+    'turquoise': $turquoise,
+    'grayblue': $grayblue,
+    'black': $black,
+    'gray__darker': $gray__darker,
+    'white': $white
+);
+
+$color-primary: map-get($color-list,'navy');
+$color-secundary: map-get($color-list,'yellow');
+
+$size-vars: (
+  "xx-small" :    .875, // 14px
+  "x-small"  :    1,    // 16px
+  "small"    :    1.25, // 20px
+  "medium"   :    1.5,  // 24px
+  "x-big"    :    2,  // 32px
+  "xx-big"   :    2.25, //36px
+  "normal"   :    2.5,  // 40px
+  "x-normal" :    3, //48px
+  "big"      :    4, //64px
+  "xxx-big"  :    6, //96px
+  "huge"     :    8  // 128px
+);
+
+$weight-font: (
+  "light"     :   200,
+  "regular"   :   400,
+  "extrabold" :   900
+);
+
+$size-components: (
+  "none"     :    0,
+  "xxx-small":   .25,  // 4px
+  "xx-small" :    .50,  // 8px
+  "x-small"  :    .625, // 10px
+  "small"    :    .75,  // 12px
+  "medium"   :    .875, // 14px
+  "normal"   :    1,    // 16px
+  "x-normal" :    1.125, // 18px
+  "big"      :    1.375,  // 22px
+  "x-big"    :    1.75,  // 28px
+  "xx-big"   :    2,  // 32px
+  "xxx-big"  :    2.25, // 36px
+  "huge"     :    2.50,  // 40px
+  "x-huge"   :    3.875     //62px
+);
