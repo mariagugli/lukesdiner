@@ -1,0 +1,27 @@
+$bp-small: 428px;
+$bp-medium: 834px;
+$bp-large: 1728px;
+
+@mixin mq($bp: $bp-medium, $bp-direction: min-width) {
+  @media all and ($bp-direction: $bp) {
+    @content;
+  }
+}
+
+@mixin var-components($padding, $gap: none, $fs:x-small, $width: fit-content) {
+  padding: CompVar($padding);
+  gap: CompVar($gap);
+  font-size: fs($fs);
+  width: $width;
+}
+
+@mixin btn-colors($bg-color, $br-color, $color-txt) {
+  background-color: $bg-color;
+  border-color: $br-color;
+  color: $color-txt;
+}
+
+@mixin icon-size($width, $height) {
+  width: sizeIcon($width);
+  height: $height;
+}

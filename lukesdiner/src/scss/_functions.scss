@@ -2,7 +2,7 @@
     @return map-get($size-vars, $font-size) * 1rem;
   }
   
-  @function sizeComp($comp-vars) {
+  @function CompVar($comp-vars) {
     @return map-get($components-vars, $comp-vars) * 1rem;
   }
   

@@ -1,0 +1,58 @@
+@font-face {
+    font-family: 'Vickie';
+    src: url(lukesdiner/public/fonts/Vickie.woff);
+}
+@font-face {
+    font-family: 'Red Hat Display', sans-serif;
+    src: url(lukesdiner/public/fonts/RedHatDisplay-VariableFontwght.woff);
+}
+
+h1, .h1 {
+    font-size: fs(xx-big);
+    @include mq() {
+        font-size: fs(huge);
+    }
+}
+
+h2, .h2 {
+    font-size: fs(big);
+    @include mq() {
+        font-size: fs(xx-big);
+    }
+    @include mq($bp-large) {
+        font-size: fs(xxx-big);
+    }
+}
+h3, .h3 {
+    font-size: fs(x-normal);
+    @include mq() {
+        font-size: fs(big);
+    }
+    @include mq($bp-large) {
+        font-size: fs(xx-big);
+    }
+}
+h4, .h4 {
+    font-size: fs(small);
+    @include mq() {
+        font-size: fs(medium);
+    }
+    @include mq($bp-large) {
+        font-size: fs(x-big);
+    }
+}
+h5, .h5 {
+    font-size: fs(x-small);
+    @include mq() {
+        font-size: fs(small);
+    }
+    @include mq($bp-large) {
+        font-size: fs(normal);
+    }
+}
+p, h6, .h6 {
+    font-size: fs(xx-small);
+    @include mq() {
+        font-size: fs(medium);
+    }
+}
