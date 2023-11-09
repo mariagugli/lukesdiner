@@ -6,9 +6,13 @@
     font-family: 'Red Hat Display', sans-serif;
     src: url(../../public/fonts/RedHatDisplay-VariableFontwght.woff);
 }
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
 
 h1, .h1 {
     font-size: fs(xx-big);
+    font-family: 'Vickie';
     @include mq() {
         font-size: fs(huge);
     }

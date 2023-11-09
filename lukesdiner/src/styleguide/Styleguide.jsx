@@ -3,7 +3,30 @@ import './Styleguide.scss'
 
 export default function Styleguide() {
     return <>
-        <h1>Hola soy tu styleguide!</h1>
-        <Btn type='primary' text='Send'/>
+        <p>Hey! This is a styleguide for</p>
+        <h1>Luke's Diner website</h1>
+        <section className='styleguideSection__pattern'>
+            <article className="styleguideArticle__pattern primarybtns__article">
+                <h2 className='h3'>Primary Buttons</h2>
+                <div>
+                    <Btn type='primary' size='xsmall' text='Send' />
+                    <Btn type='primary' size='small' text='Send' />
+                    <Btn type='primary' text='Send' />
+                    <Btn type='primary' size='big' text='Send' />
+                    <Btn type='primary' size='xbig' text='Send' />
+                </div>
+                    
+            </article>
+            <article className="styleguideArticle__pattern secondarybtns__article">
+                <h2 className='h3'>Secondary Buttons</h2>
+                <div>
+                    <Btn type='secondary' size='xsmall' text='Send' />
+                    <Btn type='secondary' size='small' text='Send' />
+                    <Btn type='secondary' text='Send' />
+                    <Btn type='secondary' size='big' text='Send' />
+                    <Btn type='secondary' size='xbig' text='Send' />
+                </div>
+            </article>
+        </section>
     </>
 }

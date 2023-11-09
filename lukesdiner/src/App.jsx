@@ -14,7 +14,9 @@ function App() {
       <header>
 
       </header>
-      <main>
+      <main className={location.pathname === "/styleguide" ? "main__styleguide"
+        : "main"
+      }>
 
         <Routes>
           <Route path="/" element={<Home />} />

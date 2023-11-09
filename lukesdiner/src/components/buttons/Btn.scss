@@ -6,6 +6,7 @@
   align-items: center;
   justify-content: space-around;
   gap: compVar('x-small');
+  margin: compVar('xx-small');
   border-radius: compVar('x-huge');
   border: 1px solid transparent;
   font-family: 'Vickie';
@@ -37,7 +38,7 @@ a {
     }
 }
 .btn-secondary {
-    @include btn-colors(none, $color-secundary, $color-secundary);
+    @include btn-colors(transparent, $color-secundary, $color-secundary);
     &:hover,
     &:focus,
     &:focus-visible {

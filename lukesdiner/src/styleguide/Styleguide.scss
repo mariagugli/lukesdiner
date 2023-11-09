@@ -1,1 +1,22 @@
-@import '../scss/global.scss'
+@import '../scss/global.scss';
+
+.main__styleguide {
+    padding: compVar('xxx-big');
+    gap: compVar('xxx-normal') * 2;
+    display: flex;
+    flex-direction: column;
+    background-color: $navy__lighter;
+};
+.styleguideSection__pattern {
+    background-color: $gray__light;
+    border: 1px solid $color-primary;
+    border-radius: compVar('x-big');
+    padding: compVar('x-huge') (compVar('x-huge') * 2);
+    display: flex;
+    justify-content: space-between;
+};
+.styleguideArticle__pattern {
+    display: flex;
+    flex-direction: column;
+    gap: compVar('x-normal');
+};
