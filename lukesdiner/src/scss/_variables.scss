@@ -64,17 +64,17 @@ $color-primary: map-get($color-list,'navy');
 $color-secundary: map-get($color-list,'yellow');
 
 $size-vars: (
-  "xx-small" :    .875, // 14px
-  "x-small"  :    1,    // 16px
-  "small"    :    1.25, // 20px
-  "medium"   :    1.5,  // 24px
-  "x-normal" :    2,  // 32px
-  "normal"   :    2.25, //36px
-  "big"      :    2.5,  // 40px
-  "x-big"    :    3, //48px
-  "xx-big"   :    4, //64px
-  "xxx-big"  :    6, //96px
-  "huge"     :    8  // 128px
+  "xx-small" :    .875,   // 14px
+  "x-small"  :    1,      // 16px
+  "small"    :    1.25,   // 20px
+  "medium"   :    1.5,    // 24px
+  "x-normal" :    2,      // 32px
+  "normal"   :    2.25,   // 36px
+  "big"      :    2.5,    // 40px
+  "x-big"    :    3,      // 48px
+  "xx-big"   :    4,      // 64px
+  "xxx-big"  :    6,      // 96px
+  "huge"     :    8       // 128px
 );
 
 $weight-font: (
@@ -84,18 +84,22 @@ $weight-font: (
 );
 
 $components-vars: (
-  "none"     :    0,
-  "xxx-small":   .25,  // 4px
-  "xx-small" :    .50,  // 8px
-  "x-small"  :    .625, // 10px
-  "small"    :    .75,  // 12px
-  "medium"   :    .875, // 14px
-  "normal"   :    1,    // 16px
-  "x-normal" :    1.125, // 18px
-  "big"      :    1.375,  // 22px
-  "x-big"    :    1.75,  // 28px
-  "xx-big"   :    2,  // 32px
-  "xxx-big"  :    2.25, // 36px
-  "huge"     :    2.50,  // 40px
-  "x-huge"   :    3.875     //62px
+  "none"      :    0,
+  "xxx-small" :   .25,      // 4px
+  "xx-small"  :    .50,     // 8px
+  "x-small"   :    .625,    // 10px
+  "small"     :    .75,     // 12px
+  "xx-medium" :    0.875,    // 14px,
+  "x-medium"  :    1,       // 16px
+  "medium"    :    1.125,   // 18px
+  "normal"    :    1.375,   // 22px
+  "x-normal"  :    1.75,    // 28px
+  "xx-normal" :    2,       // 32px
+  "xxx-normal":   2.25,     // 36px
+  "big"       :    2.50,    // 40px
+  "x-big"     :    2.625,   // 42px
+  "xx-big"    :    2.875,    // 46px
+  "xxx-big"   :    3.25,    // 52px
+  "huge"      :    3.5,    // 56px
+  "x-huge"    :    3.875    // 62px
 );

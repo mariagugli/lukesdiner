@@ -1,1 +1,122 @@
 @import '../../scss/global.scss';
+
+.btn {
+  height: fit-content;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: CompVar(x-small);
+  border-radius: CompVar(x-huge);
+  border: 1px solid transparent;
+  font-family: 'Vickie';
+  cursor: pointer;
+  transition: border-color 0.25s;
+  transition: background-color 0.25s;
+}
+.btn:focus,
+.btn:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+a {
+  color: $black;
+}
+.linkbtn {
+  background: none;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 0;
+  color: $black;
+}
+.btn-primary {
+    @include btn-colors($color-primary, none, $navy__lighter);
+    &:hover,
+    &:focus,
+    &:focus-visible {
+        @include btn-colors($navy__light, $color-primary, $color-primary);
+        box-shadow: $color-primary;
+    }
+}
+.btn-secondary {
+    @include btn-colors(none, $color-secundary, $color-secundary);
+    &:hover,
+    &:focus,
+    &:focus-visible {
+        @include btn-colors($yellow__light, $yellow__dark, $yellow__dark);
+        box-shadow: $yellow__dark;
+    }
+}
+.btn-xsmall, .linkbtn-xsmall {
+    @include var-components(CompVar(x-small) CompVar(normal), CompVar(normal))
+}
+.btn-small, .linkbtn-small {
+    @include var-components(CompVar(small) CompVar(xx-normal), CompVar(x-small), fs(medium))
+}
+.btn-default, .linkbtn-default {
+    @include var-components(CompVar(xx-medium) CompVar(x-big), CompVar(x-small), fs(normal))
+}
+.btn-big, .linkbtn-big {
+    @include var-components(CompVar(x-medium) CompVar(xxx-big), CompVar(x-small), fs(x-big))
+}
+.btn-xbig, .linkbtn-xbig {
+    @include var-components(CompVar(medium) CompVar(x-huge), CompVar(x-small), fs(xx-big))
+}
+.btn-xsmall {
+    &:hover,
+    &:focus,
+    &:focus-visible {
+        box-shadow: 2px 2px 0px 0px;
+        border: 1px solid;
+    }
+}
+.btn-small, .btn-default {
+    &:hover,
+    &:focus,
+    &:focus-visible {
+        box-shadow: 3px 3px 0px 0px;
+        border: 1px solid;
+    }
+}
+.btn-big, .btn-xbig {
+    &:hover,
+    &:focus,
+    &:focus-visible {
+        box-shadow: 4px 4px 0px 0px;
+        border: 1px solid;
+    }
+}
+.linkbtn-xsmall {
+    &:hover,
+    &:focus,
+    &:focus-visible {
+        @include var-components(CompVar(x-small) CompVar(x-small) CompVar(x-small) CompVar(normal), CompVar(normal))
+    }
+}
+.linkbtn-small {
+    &:hover,
+    &:focus,
+    &:focus-visible {
+        @include var-components(CompVar(small) CompVar(small) CompVar(small) CompVar(xx-normal), CompVar(x-normal), fs(medium))
+    }
+}
+.linkbtn-default {
+    &:hover,
+    &:focus,
+    &:focus-visible {
+        @include var-components(CompVar(xx-medium) CompVar(xx-medium) CompVar(xx-medium) CompVar(x-big), CompVar(xxx-normal), fs(normal))
+    }
+}
+.linkbtn-big {
+    &:hover,
+    &:focus,
+    &:focus-visible {
+        @include var-components(CompVar(x-medium) CompVar(x-medium) CompVar(x-medium) CompVar(xxx-big), CompVar(xx-big), fs(x-big))
+    }
+}
+.linkbtn-xbig {
+    &:hover,
+    &:focus,
+    &:focus-visible {
+        @include var-components(CompVar(medium) CompVar(medium) CompVar(medium) CompVar(x-huge), CompVar(xxx-big), fs(xx-big))
+    }
+}
