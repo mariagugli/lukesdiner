@@ -1,32 +1,34 @@
 @import '../../scss/global.scss';
+
+.btn, .linkbtn {
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: compVar('x-small');
+    margin: compVar('xx-small');
+    font-family: 'Vickie';
+    cursor: pointer;
+    transition: border-color 0.25s;
+    transition: background-color 0.25s;
+}
 .btn {
-  height: fit-content;
-  width: fit-content;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  gap: compVar('x-small');
-  margin: compVar('xx-small');
-  border-radius: compVar('x-huge');
-  border: 1px solid transparent;
-  font-family: 'Vickie';
-  cursor: pointer;
-  transition: border-color 0.25s;
-  transition: background-color 0.25s;
+    border-radius: compVar('x-huge');
+    border: 1px solid transparent;
 }
 .btn:focus,
 .btn:focus-visible {
-  outline: 1.2px solid;
+    outline: 1.2px solid;
 }
 a {
-  color: $black;
+    color: $black;
 }
 .linkbtn {
-  background: none;
-  text-decoration: none;
-  cursor: pointer;
-  padding: 0;
-  color: $black;
+    background: none;
+    text-decoration: none;
+    padding: 0;
+    color: $black;
 }
 .btn-primary {
     @include btn-colors($color-primary, none, $navy__lighter);

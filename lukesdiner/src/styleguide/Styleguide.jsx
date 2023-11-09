@@ -1,4 +1,5 @@
 import Btn from '../components/buttons/Btn'
+import Icon from '../components/icons/Icons'
 import './Styleguide.scss'
 
 export default function Styleguide() {
@@ -26,6 +27,15 @@ export default function Styleguide() {
                     <Btn type='secondary' size='big' text='Send' />
                     <Btn type='secondary' size='xbig' text='Send' />
                 </div>
+            </article>
+        </section>
+        <section className='styleguideSection__pattern'>
+            <article className="styleguideArticle__pattern primarybtns__article">
+                <h2 className='h3'>Icons</h2>
+                <div>
+                    <Icon name='arrow-right' />
+                </div>
+                    
             </article>
         </section>
     </>

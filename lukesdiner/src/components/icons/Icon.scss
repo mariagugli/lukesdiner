@@ -1,0 +1,26 @@
+@import '../../scss/global.scss';
+
+.icon > path {
+    fill: $color-primary;
+}
+
+.icon-xsmall {
+    width: 20px;
+    height: auto;
+};
+.icon-small {
+    width: 28px;
+    height: auto;
+};
+.icon-default {
+    width: 40px;
+    height: auto;
+};
+.icon-big {
+    width: 52px;
+    height: auto;
+};
+.icon-xbig {
+    width: 68px;
+    height: auto;
+};
