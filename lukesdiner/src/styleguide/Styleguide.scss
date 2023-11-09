@@ -25,3 +25,10 @@
     flex-wrap: wrap;
     gap: compVar('big');
 }
+.itemsLine {
+    display: flex;
+    gap: compVar('x-normal');
+}
+.subtitle__styleguide {
+    font-weight: fw('regular');
+}

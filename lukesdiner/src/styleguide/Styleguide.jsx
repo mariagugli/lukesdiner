@@ -51,7 +51,23 @@ export default function Styleguide() {
                     <Icon name='twitter' />
                     <Icon name='facebook' />
                 </div>
-                    
+                <h3 className='h4 subtitle__styleguide'>Sizes</h3>
+                <div className='listItemsWrap'>
+                    <div className='itemsLine'>
+                        <Icon name='arrow-right' size='xsmall'/>
+                        <Icon name='arrow-right' size='small'/>
+                        <Icon name='arrow-right' />
+                        <Icon name='arrow-right' size='big'/>
+                        <Icon name='arrow-right' size='xbig'/>
+                    </div>
+                    <div className='itemsLine'>
+                        <Icon name='instagram' size='xsmall'/>
+                        <Icon name='instagram' size='small'/>
+                        <Icon name='instagram' />
+                        <Icon name='instagram' size='big'/>
+                        <Icon name='instagram' size='xbig'/>
+                    </div>
+                </div>
             </article>
         </section>
     </>

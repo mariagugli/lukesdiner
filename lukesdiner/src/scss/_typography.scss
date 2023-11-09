@@ -8,10 +8,12 @@
 }
 h1, h2, h3, h4, h5, h6, p {
     margin: 0;
+    font-weight: fw('regular');
 }
 
 h1, .h1 {
     font-size: fs(xx-big);
+    font-weight: fw(bold);
     font-family: 'Vickie';
     @include mq() {
         font-size: fs(huge);
@@ -20,6 +22,7 @@ h1, .h1 {
 
 h2, .h2 {
     font-size: fs(big);
+    font-weight: fw(bold);
     @include mq() {
         font-size: fs(xx-big);
     }
