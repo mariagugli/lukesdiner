@@ -1,13 +1,12 @@
 @import '../../scss/global.scss';
-
 .btn {
   height: fit-content;
   width: fit-content;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  gap: CompVar(x-small);
-  border-radius: CompVar(x-huge);
+  gap: compVar('x-small');
+  border-radius: compVar('x-huge');
   border: 1px solid transparent;
   font-family: 'Vickie';
   cursor: pointer;
@@ -16,7 +15,7 @@
 }
 .btn:focus,
 .btn:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  outline: 1.2px solid;
 }
 a {
   color: $black;
@@ -47,76 +46,82 @@ a {
     }
 }
 .btn-xsmall, .linkbtn-xsmall {
-    @include var-components(CompVar(x-small) CompVar(normal), CompVar(normal))
+    @include var-components(compVar('x-small') compVar('normal'), normal)
 }
 .btn-small, .linkbtn-small {
-    @include var-components(CompVar(small) CompVar(xx-normal), CompVar(x-small), fs(medium))
+    @include var-components(compVar('small') compVar('xx-normal'), x-small, medium)
 }
 .btn-default, .linkbtn-default {
-    @include var-components(CompVar(xx-medium) CompVar(x-big), CompVar(x-small), fs(normal))
+    @include var-components(compVar('xx-medium') compVar('x-big'), x-small, normal)
 }
 .btn-big, .linkbtn-big {
-    @include var-components(CompVar(x-medium) CompVar(xxx-big), CompVar(x-small), fs(x-big))
+    @include var-components(compVar('x-medium') compVar('xxx-big'), x-small, x-big)
 }
 .btn-xbig, .linkbtn-xbig {
-    @include var-components(CompVar(medium) CompVar(x-huge), CompVar(x-small), fs(xx-big))
+    @include var-components(compVar('medium') compVar('x-huge'), x-small, xx-big)
 }
 .btn-xsmall {
-    &:hover,
-    &:focus,
-    &:focus-visible {
+    &:hover {
         box-shadow: 2px 2px 0px 0px;
         border: 1px solid;
     }
-}
-.btn-small, .btn-default {
-    &:hover,
     &:focus,
     &:focus-visible {
         box-shadow: 3px 3px 0px 0px;
-        border: 1px solid;
     }
 }
-.btn-big, .btn-xbig {
-    &:hover,
+.btn-small, .btn-default {
+    &:hover {
+        box-shadow: 3px 3px 0px 0px;
+        border: 1px solid;
+    }
     &:focus,
     &:focus-visible {
         box-shadow: 4px 4px 0px 0px;
+    }
+}
+.btn-big, .btn-xbig {
+    &:hover {
+        box-shadow: 4px 4px 0px 0px;
         border: 1px solid;
+    }
+    &:focus,
+    &:focus-visible {
+        box-shadow: 6px 6px 0px 0px;
     }
 }
 .linkbtn-xsmall {
     &:hover,
     &:focus,
     &:focus-visible {
-        @include var-components(CompVar(x-small) CompVar(x-small) CompVar(x-small) CompVar(normal), CompVar(normal))
+        @include var-components(compVar('x-small') compVar('x-small') compVar('x-small') compVar('normal'), normal)
     }
 }
 .linkbtn-small {
     &:hover,
     &:focus,
     &:focus-visible {
-        @include var-components(CompVar(small) CompVar(small) CompVar(small) CompVar(xx-normal), CompVar(x-normal), fs(medium))
+        @include var-components(compVar('small') compVar('small') compVar('small') compVar('xx-normal'), x-normal, medium)
     }
 }
 .linkbtn-default {
     &:hover,
     &:focus,
     &:focus-visible {
-        @include var-components(CompVar(xx-medium) CompVar(xx-medium) CompVar(xx-medium) CompVar(x-big), CompVar(xxx-normal), fs(normal))
+        @include var-components(compVar('xx-medium') compVar('xx-medium') compVar('xx-medium') compVar('x-big'), xxx-normal, normal)
     }
 }
 .linkbtn-big {
     &:hover,
     &:focus,
     &:focus-visible {
-        @include var-components(CompVar(x-medium) CompVar(x-medium) CompVar(x-medium) CompVar(xxx-big), CompVar(xx-big), fs(x-big))
+        @include var-components(compVar('x-medium') compVar('x-medium') compVar('x-medium') compVar('xxx-big'), xx-big, x-big)
     }
 }
 .linkbtn-xbig {
     &:hover,
     &:focus,
     &:focus-visible {
-        @include var-components(CompVar(medium) CompVar(medium) CompVar(medium) CompVar(x-huge), CompVar(xxx-big), fs(xx-big))
+        @include var-components(compVar('medium') compVar('medium') compVar('medium') compVar('x-huge'), xxx-big, xx-big)
     }
 }

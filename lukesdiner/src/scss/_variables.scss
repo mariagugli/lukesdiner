@@ -51,13 +51,13 @@ $alert__blue__dark: #2D489F;
 $alert__blue__darker: #192857;
 
 $color-list: (
-    'navy': $navy,
-    'yellow': $yellow,
-    'turquoise': $turquoise,
-    'grayblue': $grayblue,
-    'black': $black,
-    'gray__darker': $gray__darker,
-    'white': $white
+  'navy': $navy,
+  'yellow': $yellow,
+  'turquoise': $turquoise,
+  'grayblue': $grayblue,
+  'black': $black,
+  'gray__darker': $gray__darker,
+  'white': $white
 );
 
 $color-primary: map-get($color-list,'navy');
@@ -89,7 +89,7 @@ $components-vars: (
   "xx-small"  :    .50,     // 8px
   "x-small"   :    .625,    // 10px
   "small"     :    .75,     // 12px
-  "xx-medium" :    0.875,    // 14px,
+  "xx-medium" :    .875,    // 14px
   "x-medium"  :    1,       // 16px
   "medium"    :    1.125,   // 18px
   "normal"    :    1.375,   // 22px
@@ -98,8 +98,8 @@ $components-vars: (
   "xxx-normal":   2.25,     // 36px
   "big"       :    2.50,    // 40px
   "x-big"     :    2.625,   // 42px
-  "xx-big"    :    2.875,    // 46px
+  "xx-big"    :    2.875,   // 46px
   "xxx-big"   :    3.25,    // 52px
-  "huge"      :    3.5,    // 56px
+  "huge"      :    3.5,     // 56px
   "x-huge"    :    3.875    // 62px
 );

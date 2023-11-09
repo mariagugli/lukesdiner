@@ -9,8 +9,8 @@ $bp-large: 1728px;
 }
 
 @mixin var-components($padding, $gap: none, $fs:x-small, $width: fit-content) {
-  padding: CompVar($padding);
-  gap: CompVar($gap);
+  padding: $padding;
+  gap: compVar($gap);
   font-size: fs($fs);
   width: $width;
 }

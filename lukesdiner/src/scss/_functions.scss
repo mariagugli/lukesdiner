@@ -1,11 +1,11 @@
 @function fs($font-size) {
-    @return map-get($size-vars, $font-size) * 1rem;
-  }
-  
-  @function CompVar($comp-vars) {
-    @return map-get($components-vars, $comp-vars) * 1rem;
-  }
-  
-  @function fw($font-weight) {
-    @return map-get($weight-font, $font-weight);
-  }
+  @return map-get($size-vars, $font-size) * 1rem;
+}
+
+@function compVar($comp-vars) {
+  @return map-get($components-vars, $comp-vars) * 1rem;
+}
+
+@function fw($font-weight) {
+  @return map-get($weight-font, $font-weight);
+}
