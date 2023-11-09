@@ -20,3 +20,8 @@
     flex-direction: column;
     gap: compVar('x-normal');
 };
+.listItemsWrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: compVar('big');
+}

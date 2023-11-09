@@ -32,8 +32,24 @@ export default function Styleguide() {
         <section className='styleguideSection__pattern'>
             <article className="styleguideArticle__pattern primarybtns__article">
                 <h2 className='h3'>Icons</h2>
-                <div>
+                <div className='listItemsWrap'>
+                    <Icon name='arrow-down' />
+                    <Icon name='arrow-up' />
+                    <Icon name='arrow-left' />
                     <Icon name='arrow-right' />
+                    <Icon name='circle' />
+                    <Icon name='minus' />
+                    <Icon name='plus' />
+                    <Icon name='cross' />
+                    <Icon name='check' />
+                    <Icon name='cart' />
+                    <Icon name='magnify' />
+                    <Icon name='map-marker' />
+                    <Icon name='phone' />
+                    <Icon name='email' />
+                    <Icon name='instagram' />
+                    <Icon name='twitter' />
+                    <Icon name='facebook' />
                 </div>
                     
             </article>

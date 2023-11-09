@@ -1,6 +1,7 @@
 @import '../../scss/global.scss';
 
-.icon > path {
+.icon > path,
+.icon > circle {
     fill: $color-primary;
 }
 
