@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import './Btn.scss';
+import Icon from '../icons/Icons';
 
 export default function Btn(props) {
     return <>
@@ -7,10 +8,13 @@ export default function Btn(props) {
             <Link 
                 to={props.to} 
                 target={props.target ? props.target : '_self'} 
-                className={`linkbtn linkbtn-${props.type} ${props.size ? `btn-${props.size}` : "btn-default" }`}>
+                className={`linkbtn linkbtn-${props.type} ${props.size ? `linkbtn-${props.size}` : "linkbtn-default" }`}>
 
-                {props.icon ? props.icon : ''}
-                {props.text ? props.text : ''}
+                <div className="text__linkbtn">
+                    {props.text ? props.text : ''}
+                    <span className='line__linkbtn'></span>
+                </div>
+                <Icon name={props.icon ? props.icon : ''} />
                 {props.children}
 
             </Link>

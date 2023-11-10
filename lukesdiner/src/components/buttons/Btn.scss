@@ -10,25 +10,33 @@
     margin: compVar('xx-small');
     font-family: 'Vickie';
     cursor: pointer;
-    transition: border-color 0.25s;
-    transition: background-color 0.25s;
-}
-.btn {
     border-radius: compVar('x-huge');
     border: 1px solid transparent;
+    transition: border-color 0.25s;
+    transition: background-color 0.25s;
 }
 .btn:focus,
 .btn:focus-visible {
     outline: 1.2px solid;
 }
 a {
-    color: $black;
+    color: $color-primary;
 }
 .linkbtn {
     background: none;
     text-decoration: none;
-    padding: 0;
     color: $black;
+}
+.text__linkbtn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+}
+.line__linkbtn {
+    width: 100%;
+    height: 1px;
+    border-radius: 6px;
 }
 .btn-primary {
     @include btn-colors($color-primary, none, $navy__lighter);
@@ -48,6 +56,71 @@ a {
         box-shadow: $yellow__dark;
     }
 }
+.linkbtn-primary, .linkbtn-secondary {
+    &:hover,
+    &:focus,
+    &:focus-visible {
+        & .text__linkbtn {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        & .icon {
+            display: none;
+        }
+        & .line__linkbtn {
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            background: none;
+            &::before {
+                display: flex;
+                content: '';
+                border-radius: 100%;
+            }
+        }
+    }
+}
+.linkbtn-primary {
+    color: $turquoise__light;
+    & .line__linkbtn {
+        background-color: $turquoise__darker;
+    }
+    & .icon > path {
+        fill: $turquoise__darker;
+    }
+    &:hover, 
+    &:focus,
+    &:focus-visible {
+        background-color: $turquoise__darker;
+        color: $turquoise__light;
+        & .line__linkbtn {
+            &::before {
+                background-color: $turquoise__light;
+            }
+        }
+    }
+}
+.linkbtn-secondary {
+    color: $grayblue__darker;
+    & .line__linkbtn {
+        background-color: $grayblue__dark;
+    }
+    & .icon > path {
+        fill: $grayblue__dark;
+    }
+    &:hover, 
+    &:focus,
+    &:focus-visible {
+        background-color: $grayblue__darker;
+        color: $grayblue__light;
+        & .line__linkbtn {
+            &::before {
+                background-color: $grayblue__light;
+            }
+        }
+    }
+}
+
 .btn-xsmall, .linkbtn-xsmall {
     @include var-components(compVar('x-small') compVar('normal'), normal)
 }
@@ -94,37 +167,124 @@ a {
     }
 }
 .linkbtn-xsmall {
+    & .icon {
+        width: compVar(x-small) * 2;
+        height: auto;
+    }
     &:hover,
     &:focus,
     &:focus-visible {
-        @include var-components(compVar('x-small') compVar('x-small') compVar('x-small') compVar('normal'), normal)
+        @include var-components(compVar('x-small') compVar('x-small') compVar('x-small') compVar('normal'), normal);
+        & .text__linkbtn {
+            gap: compVar(normal) + (compVar(normal) - compVar(x-small));
+        }
+        & .line__linkbtn {
+            width: compVar(x-small) * 2;
+            height: compVar(x-small)* 2;
+            &::before {
+                width: compVar(x-small);
+                height: compVar(x-small);
+            }
+        }
     }
 }
 .linkbtn-small {
+    & .line__linkbtn {
+        height: 2px;
+    }
+    & .icon {
+        width: compVar(x-normal);
+        height: auto;
+    }
     &:hover,
     &:focus,
     &:focus-visible {
-        @include var-components(compVar('small') compVar('small') compVar('small') compVar('xx-normal'), x-normal, medium)
+        @include var-components(compVar('small') compVar('small') compVar('small') compVar('xx-normal'), x-small, medium);
+        & .text__linkbtn {
+            gap: compVar(x-small) + (compVar(xx-normal) - compVar(small));
+        }
+        & .line__linkbtn {
+            width: compVar(x-normal);
+            height: compVar(x-normal);
+            &::before {
+                width: compVar(x-medium);
+                height: compVar(x-medium);
+            }
+        }
     }
 }
 .linkbtn-default {
+    & .line__linkbtn {
+        height: 2px;
+    }
+    & .icon {
+        width: compVar(big);
+        height: auto;
+    }
     &:hover,
     &:focus,
     &:focus-visible {
-        @include var-components(compVar('xx-medium') compVar('xx-medium') compVar('xx-medium') compVar('x-big'), xxx-normal, normal)
+        @include var-components(compVar('xx-medium') compVar('xx-medium') compVar('xx-medium') compVar('x-big'), x-small, normal);
+        & .text__linkbtn {
+            gap: compVar(x-small) + (compVar(x-big) - compVar(xx-medium));
+        }
+        & .line__linkbtn {
+            width: compVar(big);
+            height: compVar(big);
+            &::before {
+                width: compVar(normal);
+                height: compVar(normal);
+            }
+        }
     }
 }
 .linkbtn-big {
+    & .line__linkbtn {
+        height: 3px;
+    }
+    & .icon {
+        width: compVar(xxx-big);
+        height: auto;
+    }
     &:hover,
     &:focus,
     &:focus-visible {
-        @include var-components(compVar('x-medium') compVar('x-medium') compVar('x-medium') compVar('xxx-big'), xx-big, x-big)
+        @include var-components(compVar('x-medium') compVar('x-medium') compVar('x-medium') compVar('xxx-big'), x-small, x-big);
+        & .text__linkbtn {
+            gap: compVar(x-small) + (compVar(xxx-big) - compVar(x-medium));
+        }
+        & .line__linkbtn {
+            width: compVar(xxx-big);
+            height: compVar(xxx-big);
+            &::before {
+                width: compVar(x-small) * 3;
+                height: compVar(x-small) * 3;
+            }
+        }
     }
 }
 .linkbtn-xbig {
+    & .line__linkbtn {
+        height: 3px;
+    }
+    & .icon {
+        width: 68px;
+        height: auto;
+    }
     &:hover,
     &:focus,
     &:focus-visible {
-        @include var-components(compVar('medium') compVar('medium') compVar('medium') compVar('x-huge'), xxx-big, xx-big)
+        @include var-components(compVar('medium') compVar('medium') compVar('medium') compVar('x-huge'), x-small, xx-big);
+        & .text__linkbtn {
+            gap: compVar(x-small) + (compVar(x-huge) - compVar(medium));
+        }
+        & .line__linkbtn {
+            width: compVar(xx-huge);
+            height: compVar(xx-huge);
+            &::before {
+                width: compVar(big);
+                height: compVar(big);
+            }
+        }
     }
 }

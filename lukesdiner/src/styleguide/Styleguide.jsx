@@ -1,5 +1,6 @@
 import Btn from '../components/buttons/Btn'
 import Icon from '../components/icons/Icons'
+import Slogan from '../components/svgTitle/Slogan'
 import './Styleguide.scss'
 
 export default function Styleguide() {
@@ -26,6 +27,29 @@ export default function Styleguide() {
                     <Btn type='secondary' text='Send' />
                     <Btn type='secondary' size='big' text='Send' />
                     <Btn type='secondary' size='xbig' text='Send' />
+                </div>
+            </article>
+        </section>
+        <section className='styleguideSection__pattern'>
+            <article className="styleguideArticle__pattern primarybtns__article">
+                <h2 className='h3'>Primary Links</h2>
+                <div>
+                    <Btn isLink={true} to="#" type='primary' size='xsmall' text='Send' icon='arrow-right' />
+                    <Btn isLink={true} to="#" type='primary' size='small' text='Send' icon='arrow-right' />
+                    <Btn isLink={true} to="#" type='primary' text='Send' icon='arrow-right' />
+                    <Btn isLink={true} to="#" type='primary' size='big' text='Send' icon='arrow-right' />
+                    <Btn isLink={true} to="#" type='primary' size='xbig' text='Send' icon='arrow-right' />
+                </div>
+                    
+            </article>
+            <article className="styleguideArticle__pattern secondarybtns__article">
+                <h2 className='h3'>Secondary Links</h2>
+                <div>
+                    <Btn isLink={true} to="#" type='secondary' size='xsmall' text='Send' icon='arrow-right' />
+                    <Btn isLink={true} to="#" type='secondary' size='small' text='Send' icon='arrow-right' />
+                    <Btn isLink={true} to="#" type='secondary' text='Send' icon='arrow-right' />
+                    <Btn isLink={true} to="#" type='secondary' size='big' text='Send' icon='arrow-right' />
+                    <Btn isLink={true} to="#" type='secondary' size='xbig' text='Send' icon='arrow-right' />
                 </div>
             </article>
         </section>
@@ -69,6 +93,9 @@ export default function Styleguide() {
                     </div>
                 </div>
             </article>
+        </section>
+        <section>
+            <Slogan color='navy' size='default' />
         </section>
     </>
 }
