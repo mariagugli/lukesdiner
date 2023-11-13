@@ -112,7 +112,15 @@ export default function Styleguide() {
                     <Input inputtype='checkbox' label='Option A' />
                     <Input size='big' inputtype='checkbox' label='Option A' />
                     <Input size='xbig' inputtype='checkbox' label='Option A' />
-                </div>  
+                </div>
+                <div className="inputsTypes__styleguide">
+                    <h3 className="subtitle__styleguide margin-bottom__lv03">Radios</h3>
+                    <Input size='xsmall' inputtype='radio' label='Option A' />
+                    <Input size='small' inputtype='radio' label='Option A' />
+                    <Input inputtype='radio' label='Option A' />
+                    <Input size='big' inputtype='radio' label='Option A' />
+                    <Input size='xbig' inputtype='radio' label='Option A' />
+                </div>
             </article>
             <article className="styleguideArticle__pattern">
                 <h2 className='h3'>Secondary Inputs</h2>
@@ -131,6 +139,14 @@ export default function Styleguide() {
                     <Input type='secondary' size='big' inputtype='checkbox' label='Option B' />
                     <Input type='secondary' size='xbig' inputtype='checkbox' label='Option B' />
                 </div>
+                <div className="inputsTypes__styleguide">
+                    <h3 className="subtitle__styleguide margin-bottom__lv03">Radios</h3>
+                    <Input type='secondary' size='xsmall' inputtype='radio' label='Option A' />
+                    <Input type='secondary' size='small' inputtype='radio' label='Option A' />
+                    <Input type='secondary' inputtype='radio' label='Option A' />
+                    <Input type='secondary' size='big' inputtype='radio' label='Option A' />
+                    <Input type='secondary' size='xbig' inputtype='radio' label='Option A' />
+                </div>  
             </article>
         </section>
         <section>

@@ -33,6 +33,27 @@
         }
     }
 }
+.radio {
+    @include var-components(compVar(small), x-small);
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    & .input-radio {
+        appearance: none;
+        border-radius: 100%;
+        width: compVar(medium);
+        height: compVar(medium);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:checked::after {
+            content: '';
+            border-radius: 100%;
+            width: compVar(xx-small);
+            height: compVar(xx-small);
+        }
+    }
+}
 .input-primary {
     & .label {
         color: $color-secondary;
@@ -53,7 +74,16 @@
         &:checked {
             background-color: $yellow__lighter;
             &::after {
-                color: $color-secondary
+                color: $color-secondary;
+            }
+        }
+    }
+    & .input-radio {
+        border: solid $color-secondary;
+        &:checked {
+            background-color: $yellow__lighter;
+            &::after {
+                background-color: $color-secondary;
             }
         }
     }
@@ -78,7 +108,16 @@
         &:checked {
             background-color: $grayblue__lighter;
             &::after {
-                color: $grayblue__dark
+                color: $grayblue__dark;
+            }
+        }
+    }
+    & .input-radio {
+        border: solid $grayblue__dark;
+        &:checked {
+            background-color: $grayblue__lighter;
+            &::after {
+                background-color: $grayblue__dark;
             }
         }
     }
@@ -108,11 +147,18 @@
         }
     }
     & .input-checkbox {
-        border-width: 2px;
         border-radius: compVar(xxx-small) + 0.15;
+    }
+    & .input-checkbox, .input-radio {
+        border-width: 2px;
         width: 1.25rem;
         height: 1.25rem;
     }
+    & .input-radio:checked::after {
+        width: compVar(x-small);
+        height: compVar(x-small);
+    }
+
 }
 .input-default {
     & .label, .input-checkbox:checked::after {
@@ -127,10 +173,16 @@
         }
     }
     & .input-checkbox {
-        border-width: 2px;
         border-radius: compVar(xx-small);
+    }
+    & .input-checkbox, .input-radio {
+        border-width: 2px;
         width: 1.5rem;
         height: 1.5rem;
+    }
+    & .input-radio:checked::after {
+        width: compVar(xx-medium);
+        height: compVar(xx-medium);
     }
 }
 .input-big, .input-xbig {
@@ -145,17 +197,23 @@
         }
     }
     & .input-checkbox {
-        border-width: 3px;
         border-radius: compVar(small);
+    }
+    & .input-checkbox, .input-radio {
+        border-width: 3px;
     }
 }
 .input-big {
     & .input, .label, .input-checkbox:checked::after {
         font-size: fs(normal);
     }
-    & .input-checkbox {
+    & .input-checkbox, .input-radio {
         width: 2.5rem;
         height: 2.5rem;
+    }
+    & .input-radio:checked::after {
+        width: compVar(normal);
+        height: compVar(normal);
     }
 }
 .input-xbig {
@@ -168,6 +226,14 @@
         height: 2.75rem;
         &:checked::after {
             font-size: fs(big);
+        }
+    }
+    & .input-radio {
+        width: 2.75rem;
+        height: 2.75rem;
+        &:checked::after {
+            width: compVar(x-normal);
+            height: compVar(x-normal);
         }
     }
 }
