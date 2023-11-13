@@ -61,7 +61,7 @@ $color-list: (
 );
 
 $color-primary: map-get($color-list,'navy');
-$color-secundary: map-get($color-list,'yellow');
+$color-secondary: map-get($color-list,'yellow');
 
 $size-vars: (
   "xx-small" :    .875,   // 14px

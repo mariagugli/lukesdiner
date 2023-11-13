@@ -16,6 +16,9 @@
     display: flex;
     justify-content: space-between;
 };
+.sectionInputs__styleguide {
+    padding: compVar('x-huge');
+}
 .styleguideArticle__pattern {
     display: flex;
     flex-direction: column;
@@ -28,6 +31,11 @@
 }
 .itemsLine {
     display: flex;
+    gap: compVar('x-normal');
+}
+.listItems__styleguide {
+    display: flex;
+    flex-direction: column;
     gap: compVar('x-normal');
 }
 .subtitle__styleguide {

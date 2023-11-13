@@ -1,0 +1,171 @@
+@import '../../scss/global.scss';
+
+.input {
+    border: none;
+    background: none;
+    font-family: inherit;
+    font-weight: fw(regular);
+    display: inline-flex;
+    align-items: center;
+    color: $black;
+    &:focus,
+    &:focus-visible {
+        border-radius: compVar(huge);
+        outline: 1px solid;
+    }
+}
+.checkbox {
+    @include var-components(compVar(small), x-small);
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    & .input-checkbox {
+        appearance: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: compVar(medium);
+        height: compVar(medium);
+        border-radius: compVar(xxx-small);
+        &:checked::after {
+            content: '\2713';
+        }
+    }
+}
+.input-primary {
+    & .label {
+        color: $color-secondary;
+    }
+    & .input {
+        border-bottom: 1px solid $color-secondary;
+        &::placeholder {
+            color: $yellow__lighter;
+        }
+        &:focus,
+        &:focus-visible {
+            outline-color: $color-secondary;
+            border-bottom: none;
+        }
+    }
+    & .input-checkbox {
+        border: solid $color-secondary;
+        &:checked {
+            background-color: $yellow__lighter;
+            &::after {
+                color: $color-secondary
+            }
+        }
+    }
+}
+.input-secondary {
+    & .label {
+        color: $grayblue__dark;
+    }
+    & .input {
+        border-bottom: 1px solid $grayblue__dark;
+        &::placeholder {
+            color: $grayblue;
+        }
+        &:focus,
+        &:focus-visible {
+            outline-color: $grayblue__dark;
+            border-bottom: none;
+        }
+    }
+    & .input-checkbox {
+        border: solid $grayblue__dark;
+        &:checked {
+            background-color: $grayblue__lighter;
+            &::after {
+                color: $grayblue__dark
+            }
+        }
+    }
+}
+.input-xsmall {
+    & .label, .input-checkbox:checked::after {
+        font-size: fs(xx-small);
+    }
+    & .input {
+        @include var-components(compVar(xx-medium) compVar(normal), none, xx-small);
+    }
+    & .input-checkbox {
+        border-width: 1.5px;
+        border-radius: compVar(xxx-small) + 0.1rem;
+    }
+}
+.input-small {
+    & .label, .input-checkbox:checked::after {
+        font-size: fs(x-small);
+    }
+    & .input {
+        border-bottom-width: 2px;
+        @include var-components(compVar(x-medium) compVar(normal), none, x-small);
+        &:focus,
+        &:focus-visible {
+            outline-width: 2px;
+        }
+    }
+    & .input-checkbox {
+        border-width: 2px;
+        border-radius: compVar(xxx-small) + 0.15;
+        width: 1.25rem;
+        height: 1.25rem;
+    }
+}
+.input-default {
+    & .label, .input-checkbox:checked::after {
+        font-size: fs(small);
+    }
+    & .input {
+        border-bottom-width: 2px;
+        @include var-components(compVar(medium) compVar(xx-normal), none, small);
+        &:focus,
+        &:focus-visible {
+            outline-width: 2px;
+        }
+    }
+    & .input-checkbox {
+        border-width: 2px;
+        border-radius: compVar(xx-small);
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+}
+.input-big, .input-xbig {
+    & .input, .input-checkbox:checked::after {
+        border-bottom-width: 3px;
+        padding: compVar(normal) compVar(x-big);
+        &:focus,
+        &:focus-visible {
+            outline-width: 3px;
+        }
+    }
+    & .input-checkbox {
+        border-width: 3px;
+        border-radius: compVar(small);
+    }
+}
+.input-big {
+    & .input, .label, .input-checkbox:checked::after {
+        font-size: fs(normal);
+    }
+    & .input-checkbox {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+}
+.input-xbig {
+    & .input, .label {
+        font-size: fs(big);
+        font-weight: fw(semibold);
+    }
+    & .input-checkbox {
+        width: 2.75rem;
+        height: 2.75rem;
+        &:checked::after {
+            font-size: fs(big);
+        }
+    }
+}

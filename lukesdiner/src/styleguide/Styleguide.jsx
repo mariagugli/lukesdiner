@@ -1,5 +1,6 @@
 import Btn from '../components/buttons/Btn'
 import Icon from '../components/icons/Icons'
+import Input from '../components/inputs/Input'
 import Slogan from '../components/svgTitle/Slogan'
 import './Styleguide.scss'
 
@@ -8,7 +9,7 @@ export default function Styleguide() {
         <p>Hey! This is a styleguide for</p>
         <h1>Luke's Diner website</h1>
         <section className='styleguideSection__pattern'>
-            <article className="styleguideArticle__pattern primarybtns__article">
+            <article className="styleguideArticle__pattern">
                 <h2 className='h3'>Primary Buttons</h2>
                 <div>
                     <Btn type='primary' size='xsmall' text='Send' />
@@ -19,7 +20,7 @@ export default function Styleguide() {
                 </div>
                     
             </article>
-            <article className="styleguideArticle__pattern secondarybtns__article">
+            <article className="styleguideArticle__pattern">
                 <h2 className='h3'>Secondary Buttons</h2>
                 <div>
                     <Btn type='secondary' size='xsmall' text='Send' />
@@ -31,7 +32,7 @@ export default function Styleguide() {
             </article>
         </section>
         <section className='styleguideSection__pattern'>
-            <article className="styleguideArticle__pattern primarybtns__article">
+            <article className="styleguideArticle__pattern">
                 <h2 className='h3'>Primary Links</h2>
                 <div>
                     <Btn isLink={true} to="#" type='primary' size='xsmall' text='Send' icon='arrow-right' />
@@ -42,7 +43,7 @@ export default function Styleguide() {
                 </div>
                     
             </article>
-            <article className="styleguideArticle__pattern secondarybtns__article">
+            <article className="styleguideArticle__pattern">
                 <h2 className='h3'>Secondary Links</h2>
                 <div>
                     <Btn isLink={true} to="#" type='secondary' size='xsmall' text='Send' icon='arrow-right' />
@@ -54,7 +55,7 @@ export default function Styleguide() {
             </article>
         </section>
         <section className='styleguideSection__pattern'>
-            <article className="styleguideArticle__pattern primarybtns__article">
+            <article className="styleguideArticle__pattern">
                 <h2 className='h3'>Icons</h2>
                 <div className='listItemsWrap'>
                     <Icon name='arrow-down' />
@@ -91,6 +92,42 @@ export default function Styleguide() {
                         <Icon name='instagram' size='big'/>
                         <Icon name='instagram' size='xbig'/>
                     </div>
+                </div>
+            </article>
+        </section>
+        <section className='styleguideSection__pattern sectionInputs__styleguide'>
+            <article className="styleguideArticle__pattern">
+                <h2 className='h3'>Primary Inputs</h2>
+                <div className='listItems__styleguide'>
+                    <Input size='xsmall' placeholder='enter your name' />
+                    <Input size='small' placeholder='enter your name' />
+                    <Input placeholder='enter your name' />
+                    <Input size='big' placeholder='enter your name' />
+                    <Input size='xbig' placeholder='enter your name' />
+                </div>
+                <div className="inputsTypes__styleguide">
+                    <Input size='xsmall' inputtype='checkbox' label='Option A' />
+                    <Input size='small' inputtype='checkbox' label='Option A' />
+                    <Input inputtype='checkbox' label='Option A' />
+                    <Input size='big' inputtype='checkbox' label='Option A' />
+                    <Input size='xbig' inputtype='checkbox' label='Option A' />
+                </div>  
+            </article>
+            <article className="styleguideArticle__pattern">
+                <h2 className='h3'>Secondary Inputs</h2>
+                <div className='listItems__styleguide'>
+                    <Input type='secondary' size='xsmall' placeholder='enter your name' />
+                    <Input type='secondary' size='small' placeholder='enter your name' />
+                    <Input type='secondary' placeholder='enter your name' />
+                    <Input type='secondary' size='big' placeholder='enter your name' />
+                    <Input type='secondary' size='xbig' placeholder='enter your name' />
+                </div>
+                <div className="inputsTypes__styleguide">
+                    <Input type='secondary' size='xsmall' inputtype='checkbox' label='Option B' />
+                    <Input type='secondary' size='small' inputtype='checkbox' label='Option B' />
+                    <Input type='secondary' inputtype='checkbox' label='Option B' />
+                    <Input type='secondary' size='big' inputtype='checkbox' label='Option B' />
+                    <Input type='secondary' size='xbig' inputtype='checkbox' label='Option B' />
                 </div>
             </article>
         </section>

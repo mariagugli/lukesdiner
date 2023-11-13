@@ -48,7 +48,7 @@ a {
     }
 }
 .btn-secondary {
-    @include btn-colors(transparent, $color-secundary, $color-secundary);
+    @include btn-colors(transparent, $color-secondary, $color-secondary);
     &:hover,
     &:focus,
     &:focus-visible {
