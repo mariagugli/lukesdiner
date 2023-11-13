@@ -137,6 +137,8 @@
     & .input, .input-checkbox:checked::after {
         border-bottom-width: 3px;
         padding: compVar(normal) compVar(x-big);
+    }
+    & .input {
         &:focus,
         &:focus-visible {
             outline-width: 3px;

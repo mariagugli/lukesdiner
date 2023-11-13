@@ -106,6 +106,7 @@ export default function Styleguide() {
                     <Input size='xbig' placeholder='enter your name' />
                 </div>
                 <div className="inputsTypes__styleguide">
+                    <h3 className="subtitle__styleguide margin-bottom__lv03">Checkboxes</h3>
                     <Input size='xsmall' inputtype='checkbox' label='Option A' />
                     <Input size='small' inputtype='checkbox' label='Option A' />
                     <Input inputtype='checkbox' label='Option A' />
@@ -123,6 +124,7 @@ export default function Styleguide() {
                     <Input type='secondary' size='xbig' placeholder='enter your name' />
                 </div>
                 <div className="inputsTypes__styleguide">
+                    <h3 className="subtitle__styleguide margin-bottom__lv03">Checkboxes</h3>
                     <Input type='secondary' size='xsmall' inputtype='checkbox' label='Option B' />
                     <Input type='secondary' size='small' inputtype='checkbox' label='Option B' />
                     <Input type='secondary' inputtype='checkbox' label='Option B' />
