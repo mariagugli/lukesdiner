@@ -18,7 +18,6 @@ export default function Select(props) {
             value={selectedValue} 
             onChange={handleSelectChange}
         >
-            <option value="01" >Option 1</option>
             <option value="title-intro" >Select an option</option>
             {props.children}
         </select>
