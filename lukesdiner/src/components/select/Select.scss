@@ -1,0 +1,94 @@
+@import '../../scss/global.scss';
+
+.select {
+    display: flex;
+    align-items: center;
+    border-radius: compVar(xxx-big);
+    width: fit-content;
+    height: fit-content;
+}
+
+.selector {
+    appearance: none;
+    border: none;
+    background: none;
+    width: 100%;
+    height: fit-content;
+    font-family: inherit;
+    font-weight: fw(semibold);
+    &:focus,
+    &:focus-visible {
+        outline: none;
+    }
+}
+.select-primary {
+    border: solid $color-secondary;
+    background-color: $yellow__lighter;
+    & .selector {
+        color: $color-secondary;
+    }
+    & .iconSelector > path {
+        fill: $color-secondary;
+    }
+}
+.select-secondary {
+    border: solid $grayblue__dark;
+    background-color: $grayblue__lighter;
+    & .selector {
+        color: $grayblue__dark;
+    }
+    & .iconSelector > path {
+        fill: $grayblue__dark;
+    }
+}
+.select-xsmall {
+    border-width: 1px;
+    @include var-components(compVar(xx-medium) compVar(normal), x-small, xx-small);
+    & .selector {
+        font-size: fs(xx-small);
+    }
+    & .iconSelector {
+        width: 20px;
+    }
+}
+.select-small {
+    border-width: 2px;
+    @include var-components(compVar(x-medium) compVar(normal), small, x-small);
+    & .selector {
+        font-size: fs(x-small);
+    }
+    & .iconSelector {
+        width: compVar(x-normal);
+    }
+}
+.select-default {
+    border-width: 2px;
+    @include var-components(compVar(medium) compVar(xx-normal), xx-medium, small);
+    & .selector {
+        font-size: fs(small);
+    }
+    & .iconSelector {
+        width: compVar(big);
+    }
+}
+.select-big {
+    border-width: 3px;
+    @include var-components(compVar(normal) compVar(x-big), x-medium, normal);
+    & .selector {
+        font-size: fs(normal);
+    }
+    & .iconSelector {
+        width: compVar(xxx-big);
+    }
+}
+.select-xbig {
+    border-width: 3px;
+    font-weight: fw(bold);
+    @include var-components(compVar(normal) compVar(x-big), medium, big);
+    & .selector {
+        font-size: fs(big);
+    }
+    & .iconSelector {
+        width: compVar(xx-huge);
+    }
+}

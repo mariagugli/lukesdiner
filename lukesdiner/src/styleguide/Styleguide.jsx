@@ -1,6 +1,7 @@
 import Btn from '../components/buttons/Btn'
 import Icon from '../components/icons/Icons'
 import Input from '../components/inputs/Input'
+import Select from '../components/select/Select'
 import Slogan from '../components/svgTitle/Slogan'
 import './Styleguide.scss'
 
@@ -146,7 +147,25 @@ export default function Styleguide() {
                     <Input type='secondary' inputtype='radio' label='Option A' />
                     <Input type='secondary' size='big' inputtype='radio' label='Option A' />
                     <Input type='secondary' size='xbig' inputtype='radio' label='Option A' />
-                </div>  
+                </div>
+            </article>
+        </section>
+        <section className='styleguideSection__pattern sectionInputs__styleguide'>
+            <article className="styleguideArticle__pattern">
+                <h2 className='h3' >Primary Selects</h2>
+                <Select type='primary' size='xsmall' />
+                <Select type='primary' size='small' />
+                <Select type='primary' size='default' />
+                <Select type='primary' size='big' />
+                <Select type='primary' size='xbig' />
+            </article>
+            <article className="styleguideArticle__pattern">
+                <h2 className='h3' >Secondary Selects</h2>
+                <Select type='secondary' size='xsmall' />
+                <Select type='secondary' size='small' />
+                <Select type='secondary' size='default' />
+                <Select type='secondary' size='big' />
+                <Select type='secondary' size='xbig' />
             </article>
         </section>
         <section>

@@ -15,9 +15,10 @@
     padding: compVar('x-huge') (compVar('x-huge') * 2);
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 };
 .sectionInputs__styleguide {
-    padding: compVar('x-huge');
+    padding: compVar(huge);
 }
 .styleguideArticle__pattern {
     display: flex;
