@@ -1,4 +1,7 @@
 import Btn from '../components/buttons/Btn'
+import CategoryList from '../components/categoryList/CategoryList'
+import Categories from '../components/categoryList/CategoryList'
+import Category from '../components/categoryList/CategoryList'
 import Icon from '../components/icons/Icons'
 import Input from '../components/inputs/Input'
 import Select from '../components/select/Select'
@@ -168,8 +171,11 @@ export default function Styleguide() {
                 <Select type='secondary' size='xbig' />
             </article>
         </section>
+        <section className='styleguideSection__pattern sectionInputs__styleguide'>
+            <Category />
+            <CategoryList />
+        </section>
         <section>
-            <Slogan color='navy' size='default' />
         </section>
     </>
 }

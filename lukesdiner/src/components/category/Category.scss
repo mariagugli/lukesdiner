@@ -1,0 +1,22 @@
+@import '../../scss/global.scss';
+
+.category {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: compVar(xx-small);
+    gap: compVar(xxx-small);
+    min-width: 84px;
+}
+.category__img {
+    width: compVar(big);
+    height: compVar(big);
+    padding: compVar(xx-small);
+    object-fit: contain;
+    background-color: $color-primary;
+    border-radius: 100%;
+}
+.category__name {
+    font-family: 'Red Hat Display', sans-serif;
+}
