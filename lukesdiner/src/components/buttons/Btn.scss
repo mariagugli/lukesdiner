@@ -9,6 +9,7 @@
     gap: compVar('x-small');
     margin: compVar('xx-small');
     font-family: 'Vickie';
+    text-decoration: none;
     cursor: pointer;
     border-radius: compVar('x-huge');
     border: 1px solid transparent;
@@ -24,7 +25,6 @@ a {
 }
 .linkbtn {
     background: none;
-    text-decoration: none;
     color: $black;
 }
 .text__linkbtn {

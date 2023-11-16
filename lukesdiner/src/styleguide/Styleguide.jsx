@@ -3,6 +3,7 @@ import Category from '../components/category/Category'
 import CategoryList from '../components/categoryList/CategoryList'
 import Icon from '../components/icons/Icons'
 import Input from '../components/inputs/Input'
+import ItemMenu from '../components/itemMenu/ItemMenu'
 import Select from '../components/select/Select'
 import './Styleguide.scss'
 
@@ -169,11 +170,21 @@ export default function Styleguide() {
                 <Select type='secondary' size='xbig' />
             </article>
         </section>
-        <section className='styleguideSection__pattern sectionInputs__styleguide'>
+        <section className='styleguideSection__pattern'>
             <Category img='../../imgs/fotos-menu/breakfast/frenchtoast.webp' alt='Breakfast' name='Breakfast' />
             <CategoryList />
         </section>
-        <section>
+        <section className='styleguideSection__pattern'>
+            <ItemMenu 
+                img='../../imgs/fotos-menu/sandwiches/turkeysandwich-shadow.webp'
+                altimg='Turkey Sandwich'
+                name='Turkey Sandwich'
+                price='$6.55'
+                category='Sandwiches'
+                linkto='/menu/sandwiches'
+                btnsize='small'
+                btntext='See all'
+            />
         </section>
     </>
 }

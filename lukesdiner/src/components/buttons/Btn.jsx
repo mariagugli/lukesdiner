@@ -4,7 +4,7 @@ import Icon from '../icons/Icons';
 
 export default function Btn(props) {
     return <>
-        {props.isLink ? 
+        {props.isLink === true ?
             <Link 
                 to={props.to} 
                 target={props.target ? props.target : '_self'} 
@@ -18,11 +18,25 @@ export default function Btn(props) {
                 {props.children}
 
             </Link>
+        : props.isLinkBtnStyle === true ?
+
+            <Link 
+                to={props.to} 
+                target={props.target ? props.target : '_self'} 
+                className={`btn ${props.type ? `btn-${props.type}` : "btn-primary" } ${props.size ? `btn-${props.size}` : "btn-default" } ${props.className}`} 
+                >
+
+                {props.icon ? props.icon : ''}
+                {props.text ? props.text : ''}
+                {props.children}
+
+            </Link>
+
         :
             <button 
                 value={props.value}
                 onClick={props.onClick}
-                className={`btn btn-${props.type} ${props.size ? `btn-${props.size}` : "btn-default" }`} 
+                className={`btn btn-${props.type} ${props.size ? `btn-${props.size}` : "btn-default" } ${props.className}`} 
                 type="button" 
                 disabled={props.status === 'disable' ? true : false}>
 

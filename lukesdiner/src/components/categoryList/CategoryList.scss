@@ -3,8 +3,11 @@
 .category__list {
     display: flex;
     overflow: scroll;
-    justify-content: space-around;
+    justify-content: flex-start;
     width: 100%;
+    @include mq($bp-large) {
+        justify-content: space-around;
+    }
 }
 .category__link {
     text-decoration: none;
