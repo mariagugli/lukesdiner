@@ -1,11 +1,9 @@
 import Btn from '../components/buttons/Btn'
+import Category from '../components/category/Category'
 import CategoryList from '../components/categoryList/CategoryList'
-import Categories from '../components/categoryList/CategoryList'
-import Category from '../components/categoryList/CategoryList'
 import Icon from '../components/icons/Icons'
 import Input from '../components/inputs/Input'
 import Select from '../components/select/Select'
-import Slogan from '../components/svgTitle/Slogan'
 import './Styleguide.scss'
 
 export default function Styleguide() {
@@ -172,7 +170,7 @@ export default function Styleguide() {
             </article>
         </section>
         <section className='styleguideSection__pattern sectionInputs__styleguide'>
-            <Category />
+            <Category img='../../imgs/fotos-menu/breakfast/frenchtoast.webp' alt='Breakfast' name='Breakfast' />
             <CategoryList />
         </section>
         <section>
