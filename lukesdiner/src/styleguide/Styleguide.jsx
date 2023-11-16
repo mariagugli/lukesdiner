@@ -5,6 +5,7 @@ import Icon from '../components/icons/Icons'
 import Input from '../components/inputs/Input'
 import ItemMenu from '../components/itemMenu/ItemMenu'
 import ListMenu from '../components/listMenu/ListMenu'
+import Product from '../components/product/Product'
 import Select from '../components/select/Select'
 import './Styleguide.scss'
 
@@ -171,11 +172,11 @@ export default function Styleguide() {
                 <Select type='secondary' size='xbig' />
             </article>
         </section>
-        <section className='styleguideSection__pattern'>
+        <section className='styleguideSection__pattern section__list--styleguide'>
             <Category img='../../imgs/fotos-menu/breakfast/frenchtoast.webp' alt='Breakfast' name='Breakfast' />
             <CategoryList />
         </section>
-        <section className='styleguideSection__pattern'>
+        <section className='styleguideSection__pattern section__list--styleguide'>
             <ItemMenu 
                 img='../../imgs/fotos-menu/sandwiches/turkeysandwich-shadow.webp'
                 altimg='Turkey Sandwich'
@@ -187,6 +188,14 @@ export default function Styleguide() {
                 btntext='See all'
             />
             <ListMenu />
+        </section>
+        <section className='styleguideSection__pattern section__list--styleguide'>
+            <Product
+                img='../../imgs/fotos-menu/specials/chickennoodlesoup.webp'
+                altimg='Chicken Noodles Soup'
+                name='Chicken Noodles Soup'
+                price='$6.55'
+            />
         </section>
     </>
 }

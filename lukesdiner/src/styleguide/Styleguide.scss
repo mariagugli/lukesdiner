@@ -33,6 +33,9 @@
         padding: compVar(huge);
     }
 }
+.section__list--styleguide {
+    padding: compVar(x-huge) compVar(medium);
+}
 .styleguideArticle__pattern {
     display: flex;
     flex-direction: column;
