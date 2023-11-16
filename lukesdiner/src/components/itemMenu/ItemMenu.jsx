@@ -4,7 +4,11 @@ import './ItemMenu.scss';
 export default function ItemMenu(props) {
     return <li className={props.className ? `itemMenu ${props.className}` : 'itemMenu'}>
         <div className={props.bgimgClass ? `bgimg__itemMenu ${props.bgimgClass}` : 'bgimg__itemMenu'}>
-            <img className={props.imgClass ? `img__itemMenu ${props.imgClass}` : 'img__itemMenu'} src={props.img} alt={props.altimg} />
+            <img 
+                className={props.imgClass ? `img__itemMenu ${props.imgClass}` : 'img__itemMenu'} 
+                src={props.img} 
+                alt={props.altimg} 
+            />
         </div>
         <div className={props.infoClass ? `info__itemMenu ${props.infoClass}` : 'info__itemMenu'}>
             <p className={props.nameClass ? `name__itemMenu ${props.nameClass}` : 'name__itemMenu'}>{props.name}</p>

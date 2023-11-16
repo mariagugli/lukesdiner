@@ -4,6 +4,7 @@ import CategoryList from '../components/categoryList/CategoryList'
 import Icon from '../components/icons/Icons'
 import Input from '../components/inputs/Input'
 import ItemMenu from '../components/itemMenu/ItemMenu'
+import ListMenu from '../components/listMenu/ListMenu'
 import Select from '../components/select/Select'
 import './Styleguide.scss'
 
@@ -185,6 +186,7 @@ export default function Styleguide() {
                 btnsize='small'
                 btntext='See all'
             />
+            <ListMenu />
         </section>
     </>
 }

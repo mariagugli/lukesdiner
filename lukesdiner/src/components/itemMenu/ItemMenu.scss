@@ -6,9 +6,11 @@
     align-items: flex-start;
     position: relative;
     z-index: 0;
-    @include var-components(compVar(big) * 6 compVar(normal) compVar(normal) compVar(normal), x-medium, medium, 11.125rem);
+    min-width: 11.125rem;
+    @include var-components(compVar(big) * 6 compVar(normal) compVar(normal) compVar(normal), x-medium);
     @include mq() {
-        @include var-components(compVar(x-big) * 7 compVar(normal) compVar(normal) compVar(normal), medium, medium, 13.75rem);
+        min-width: 13.75rem;
+        @include var-components(compVar(x-big) * 7 compVar(normal) compVar(normal) compVar(normal), medium);
     }
 }
 .bgimg__itemMenu {
