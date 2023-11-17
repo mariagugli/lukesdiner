@@ -5,6 +5,7 @@
     flex-direction: column;
     align-items: flex-start;
     gap: compVar(medium);
+    width: min-content;
     @include mq() {
         gap: compVar(x-normal);
     }

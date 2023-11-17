@@ -10,6 +10,7 @@ import Select from '../components/select/Select'
 import './Styleguide.scss'
 
 export default function Styleguide() {
+
     return <>
         <p>Hey! This is a styleguide for</p>
         <h1>Luke's Diner website</h1>
