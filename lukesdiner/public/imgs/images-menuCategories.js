@@ -54,7 +54,7 @@ export const IMGCATEGORIES = [
         'title'     :   'Burgers',
         'subtitle'  :   `Jess' Burger`,
         'price'     :   '$8.99',
-        'img'       :   '/imgs/fotos-menu/burgers/jessburgers.webp',
+        'img'       :   '/imgs/fotos-menu/burgers/jessburger.webp',
         'position'  :   'up',
         'bgcolor'   :   'yellowlight'
     },

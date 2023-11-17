@@ -3,6 +3,7 @@ import Category from '../components/category/Category'
 import CategoryList from '../components/categoryList/CategoryList'
 import Icon from '../components/icons/Icons'
 import Input from '../components/inputs/Input'
+import ItemCart from '../components/itemCart/ItemCart'
 import ItemMenu from '../components/itemMenu/ItemMenu'
 import ListMenu from '../components/listMenu/ListMenu'
 import Product from '../components/product/Product'
@@ -196,6 +197,14 @@ export default function Styleguide() {
                 altimg='Chicken Noodles Soup'
                 name='Chicken Noodles Soup'
                 price='$6.55'
+            />
+        </section>
+        <section className='styleguideSection__pattern section__list--styleguide'>
+            <ItemCart 
+                number='01'
+                name='Chicken Noodle Soup'
+                img='../../imgs/fotos-menu/specials/chickennoodlesoup.webp'
+                altimg='Chicken Noodles Soup'
             />
         </section>
     </>

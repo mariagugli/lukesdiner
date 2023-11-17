@@ -1,0 +1,50 @@
+@import '../../scss/global.scss';
+
+.itemCart {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid $gray;
+    @include var-components(compVar(xxx-small) compVar(xx-normal), xx-normal);
+}
+.info__itemCart {
+    display: flex;
+    align-items: center;
+    gap: compVar(xxx-small);
+}
+.number__itemCart, .name__itemCart {
+    color: $gray__dark;
+}
+.number__itemCart::before {
+    content: attr(data-number);
+}
+.img__itemCart {
+    background-color: $navy__lighter;
+    width: compVar(xxx-normal);
+    height: compVar(xxx-normal);
+    border-radius: compVar(xxx-small);
+    @include var-components(compVar(small));
+    @include mq() {
+        width: compVar(x-huge);
+        height: compVar(x-huge);
+        border-radius: compVar(xx-small);
+    }
+}
+.icon__itemCart {
+    width: compVar(medium);
+    height: compVar(medium);
+    display: none;
+    transition: display 0.25s;
+    @include mq() {
+        width: compVar(x-normal);
+        height: compVar(x-normal);
+    };
+    & > path {
+        fill: $alert__red__light;
+    }
+}
+.itemCart:hover {
+    & .icon__itemCart {
+        display: flex;
+    }
+}
