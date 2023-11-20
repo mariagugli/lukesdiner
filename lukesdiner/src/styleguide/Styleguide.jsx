@@ -1,3 +1,4 @@
+import BurgerMenu from '../components/burgerMenu/BurgerMenu'
 import Btn from '../components/buttons/Btn'
 import Category from '../components/category/Category'
 import CategoryList from '../components/categoryList/CategoryList'
@@ -5,9 +6,11 @@ import Icon from '../components/icons/Icons'
 import Input from '../components/inputs/Input'
 import ItemCart from '../components/itemCart/ItemCart'
 import ItemMenu from '../components/itemMenu/ItemMenu'
+import ItemSocialMedia from '../components/itemSocialMedia/ItemSocialMedia'
 import ListMenu from '../components/listMenu/ListMenu'
 import Product from '../components/product/Product'
 import Select from '../components/select/Select'
+import Topbar from '../components/topbar/Topbar'
 import './Styleguide.scss'
 
 export default function Styleguide() {
@@ -206,6 +209,15 @@ export default function Styleguide() {
                 img='../../imgs/fotos-menu/specials/chickennoodlesoup.webp'
                 altimg='Chicken Noodles Soup'
             />
+            <ItemSocialMedia
+                icon='instagram' 
+                name='Instagram'
+                to='#'
+            />
+        </section>
+        <section className='styleguideSection__pattern section__list--styleguide'>
+            <BurgerMenu />
+            <Topbar />
         </section>
     </>
 }

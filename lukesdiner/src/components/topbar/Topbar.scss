@@ -1,0 +1,43 @@
+@import '../../scss/global.scss';
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.logoSymbol {
+    background-color: $color-primary;
+    & path {
+        fill: $color-secondary;
+    }
+}
+.burgerMenu--closed, .burgerMenu--open {
+    @include mq() {
+        display: none;
+    }
+}
+.topbarMenu {
+    display: none;
+    @include mq() {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: compVar(x-big);
+        background: rgba(255, 255, 255, 0.89);
+        height: fit-content;
+        @include var-components(compVar(normal) compVar(x-normal), x-huge);
+    }
+}
+.link__topbarMenu {
+    text-decoration: none;
+    font-family: 'Vickie';
+    &:hover,
+    &:focus,
+    &:focus-visible {
+        color: $turquoise;
+    }
+    &:focus,
+    &:focus-visible {
+        text-decoration: 3px solid $turquoise;
+    }
+}

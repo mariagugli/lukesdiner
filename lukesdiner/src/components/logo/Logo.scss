@@ -1,0 +1,56 @@
+@import '../../scss/global.scss';
+
+.logoSymbol, .logoName {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.logoSymbol {
+    width: 30.375rem;
+    height: 30.375rem;
+    border-radius: 25rem;
+    background-color: $color-primary;
+    & svg {
+        height: 75%;
+    }
+}
+.logoSymbol--small {
+    width: 4.125rem;
+    height: 4.0625rem;
+    @include mq($bp-large) {
+        width: 4.75rem;
+        height: 4.75rem;
+    }
+}
+.logoSymbol--default {
+    width: 7.25rem;
+    height: 7.1875rem;
+}
+.logoName--small {
+    @include var-components(compVar(x-small), x-big);
+    & svg {
+        width: 5.3125rem;
+        height: 2.5rem;
+        @include mq($bp-large) {
+            width: 8.125rem;
+            height: 3.8125rem;
+        }
+    }
+}
+.logoName--default {
+    @include var-components(compVar(x-small), x-big);
+    & svg {
+        width: 15.5rem;
+        height: 7.3125rem;
+        @include mq() {
+            width: 21.6875rem;
+            height: 10.25rem;
+        };
+        @include mq($bp-large) {
+            width: 30.75rem;
+            height: 14.5rem;
+        }
+    }
+    
+}

@@ -1,0 +1,35 @@
+@import '../../scss/global.scss';
+
+.itemSM {
+    display: flex;
+}
+.link__itemSM {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include var-components(compVar(xxx-small), small);
+    @include mq() {
+        @include var-components(compVar(xx-small), xx-medium);
+    }
+}
+.icon__itemSM {
+    width: compVar(big);
+    height: compVar(big);
+    @include mq() {
+        width: compVar(xxx-big);
+        height: compVar(xxx-big);
+    }
+    @include mq($bp-large) {
+        width: compVar(xx-huge);
+        height: compVar(xx-huge);
+    }
+}
+.name__itemSM {
+    @include mq() {
+        font-size: fs(x-small);
+    }
+    @include mq($bp-large) {
+        font-size: fs(medium);
+    }
+}

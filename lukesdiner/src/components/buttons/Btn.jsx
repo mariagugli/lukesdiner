@@ -14,7 +14,7 @@ export default function Btn(props) {
                     {props.text ? props.text : ''}
                     <span className='line__linkbtn'></span>
                 </div>
-                <Icon name={props.icon ? props.icon : ''} />
+                <Icon name='arrow-right' />
                 {props.children}
 
             </Link>
@@ -26,7 +26,7 @@ export default function Btn(props) {
                 className={`btn ${props.type ? `btn-${props.type}` : "btn-primary" } ${props.size ? `btn-${props.size}` : "btn-default" } ${props.className}`} 
                 >
 
-                {props.icon ? props.icon : ''}
+                <Icon name='arrow-right' />
                 {props.text ? props.text : ''}
                 {props.children}
 
@@ -40,7 +40,7 @@ export default function Btn(props) {
                 type="button" 
                 disabled={props.status === 'disable' ? true : false}>
 
-                {props.icon ? props.icon : ''}
+                <Icon name={props.icon ? props.icon : ''} />
                 {props.text ? props.text : ''}
                 {props.children}
 
