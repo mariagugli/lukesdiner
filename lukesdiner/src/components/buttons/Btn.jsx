@@ -26,7 +26,7 @@ export default function Btn(props) {
                 className={`btn ${props.type ? `btn-${props.type}` : "btn-primary" } ${props.size ? `btn-${props.size}` : "btn-default" } ${props.className}`} 
                 >
 
-                <Icon name='arrow-right' />
+                {props.icon ? props.icon : ''}
                 {props.text ? props.text : ''}
                 {props.children}
 
@@ -40,7 +40,7 @@ export default function Btn(props) {
                 type="button" 
                 disabled={props.status === 'disable' ? true : false}>
 
-                <Icon name={props.icon ? props.icon : ''} />
+                {props.icon ? props.icon : ''}
                 {props.text ? props.text : ''}
                 {props.children}
 

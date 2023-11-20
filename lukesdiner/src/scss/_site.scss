@@ -25,11 +25,16 @@ body {
     width: 100vw;
     background-color: $gray__light;
 }
+header {
+    width: 100%;
+    position: fixed;
+}
 
 .main {
     width: 100%;
     height: auto;
     padding: 0;
+    padding-top: 156px;
     display: flex;
     flex-direction: column;
     align-items: center;

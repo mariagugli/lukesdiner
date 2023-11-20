@@ -3,7 +3,8 @@
 .topbar {
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    width: calc(100% - compVar(big) * 2);
+    padding: compVar(big);
 }
 .logoSymbol {
     background-color: $color-primary;
@@ -11,10 +12,41 @@
         fill: $color-secondary;
     }
 }
-.burgerMenu--closed, .burgerMenu--open {
+.logoSymbol__topbar--sponsorship {
+    background-color: $turquoise;
+    & path {
+        fill: $turquoise__darker;
+    }
+}
+.burgerMenu--closed {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    @include var-components(compVar(medium) compVar(xx-medium), x-small);
     @include mq() {
         display: none;
     }
+}
+.btn-burgerMenu {
+    background: none;
+    border: none;
+    &:hover,
+    &:focus,
+    &:focus-visible {
+        border: none;
+        box-shadow: none;
+        outline: none;
+    }
+}
+.btn-burgerMenu svg {
+    display: none;
+};
+.line__burgerMenu--closed {
+    display: flex;
+    height: compVar(xxx-small);
+    width: compVar(x-big);
+    border-radius: compVar(xxx-small);
+    background-color: $color-secondary;
 }
 .topbarMenu {
     display: none;

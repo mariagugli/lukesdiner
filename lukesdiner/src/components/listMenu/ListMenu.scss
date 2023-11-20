@@ -3,11 +3,11 @@
 .list__menu {
     display: flex;
     align-items: flex-end;
-    @include var-components(compVar(none) compVar(xx-normal), xxx-small);
+    @include var-components(compVar(none) compVar(xx-normal), xxx-small, medium, none);
     height: 28.75rem;
     overflow: scroll;
     @include mq() {
-        @include var-components(compVar(none) compVar(x-big) * 2, xxx-small);
+        @include var-components(compVar(none) compVar(x-big) * 2, xxx-small,  medium, none);
         height: 38.25rem;
     }
 }

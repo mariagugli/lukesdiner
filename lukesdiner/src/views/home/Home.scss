@@ -1,1 +1,34 @@
-@import '../../scss/global.scss'
+@import '../../scss/global.scss';
+
+.main__home {
+    padding: 0;
+    width: 100%;
+}
+.sectionHome__pattern {
+    padding: compVar(xx-huge) compVar(x-normal);
+}
+.section__intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: calc(100svh - compVar(xx-huge) * 2);
+    width: calc(100% - compVar(x-normal) * 2);
+    background: url('../../../public/imgs/cups-lukes-navybg.webp') no-repeat;
+    background-size: cover;
+}
+.section__menu {
+    background-color: $navy__lighter;
+}
+.article__sloganIntro {
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: compVar(huge);
+    height: calc(100% - compVar(huge));
+    width: 100%;
+}
+.title__sectionMenu {
+    color: $turquoise;
+    text-align: center;
+    padding: compVar(normal) 0;
+}
