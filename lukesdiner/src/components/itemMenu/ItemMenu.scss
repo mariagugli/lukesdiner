@@ -53,3 +53,26 @@
         font-size: fs(normal);
     }
 }
+.btn__itemMenu {
+    @include mq($bp-large) {
+        @include var-components(compVar('small') compVar('xx-normal'), x-small, medium);
+        &:hover {
+            box-shadow: 3px 3px 0px 0px;
+            border: 1px solid;
+        }
+        &:focus,
+        &:focus-visible {
+            box-shadow: 4px 4px 0px 0px;
+        }
+        @include mq($bp-large) {
+            &:hover {
+                box-shadow: 4px 4px 0px 0px;
+                border: 1px solid;
+            }
+            &:focus,
+            &:focus-visible {
+                box-shadow: 6px 6px 0px 0px;
+            }
+        }
+    }
+}

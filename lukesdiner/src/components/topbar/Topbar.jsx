@@ -15,12 +15,12 @@ export default function Topbar(props) {
             <span className="line__burgerMenu--closed"></span>
             <span className="line__burgerMenu--closed"></span>
         </Btn>
-        <div className="topbarMenu">
-            <Link className={props.linkMenu ? `link__topbarMenu h6 ${props.linkMenu}` : 'link__topbarMenu h6 '} to='/' >Home</Link>
-            <Link className={props.linkMenu ? `link__topbarMenu h6 ${props.linkMenu}` : 'link__topbarMenu h6'} to='/aboutus' >About us</Link>
-            <Link className={props.linkMenu ? `link__topbarMenu h6 ${props.linkMenu}` : 'link__topbarMenu h6'} to='/menu' >Menu</Link>
-            <Link className={props.linkMenu ? `link__topbarMenu h6 ${props.linkMenu}` : 'link__topbarMenu h6'} to='/sponsorship' >Sponsorship</Link>
-            <Link className={props.linkMenu ? `link__topbarMenu h6 ${props.linkMenu}` : 'link__topbarMenu h6'} to='/contact' >Contact us</Link>
-        </div>
+        <nav className="nav__topbar">
+            <Link className={props.linkMenu ? `link__nav h6 ${props.linkMenu}` : 'link__nav h6 '} to='/' >Home</Link>
+            <Link className={props.linkMenu ? `link__nav h6 ${props.linkMenu}` : 'link__nav h6'} to='/aboutus' >About us</Link>
+            <Link className={props.linkMenu ? `link__nav h6 ${props.linkMenu}` : 'link__nav h6'} to='/menu' >Menu</Link>
+            <Link className={props.linkMenu ? `link__nav h6 ${props.linkMenu}` : 'link__nav h6'} to='/sponsorship' >Sponsorship</Link>
+            <Link className={props.linkMenu ? `link__nav h6 ${props.linkMenu}` : 'link__nav h6'} to='/contact' >Contact us</Link>
+        </nav>
     </div>
 }

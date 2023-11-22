@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { IMGCATEGORIES } from '../../../public/imgs/images-menuCategories';
+import { IMGCATEGORIES } from '../../../public/images-menuCategories';
 import Category from '../category/Category';
 import './CategoryList.scss';
 

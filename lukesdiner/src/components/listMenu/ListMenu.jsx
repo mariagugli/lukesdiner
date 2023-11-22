@@ -1,4 +1,4 @@
-import { IMGCATEGORIES } from '../../../public/imgs/images-menuCategories';
+import { IMGCATEGORIES } from '../../../public/images-menuCategories';
 import ItemMenu from '../itemMenu/ItemMenu';
 import './ListMenu.scss';
 

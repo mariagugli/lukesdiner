@@ -122,16 +122,28 @@ a {
 }
 
 .btn-xsmall, .linkbtn-xsmall {
-    @include var-components(compVar('x-small') compVar('normal'), normal)
+    @include var-components(compVar('x-small') compVar('normal'), normal);
+    @include mq($bp-large) {
+        @include var-components(compVar('small') compVar('xx-normal'), x-small, medium);
+    }
 }
 .btn-small, .linkbtn-small {
-    @include var-components(compVar('small') compVar('xx-normal'), x-small, medium)
+    @include var-components(compVar('small') compVar('xx-normal'), x-small, medium);
+    @include mq($bp-large) {
+        @include var-components(compVar('xx-medium') compVar('x-big'), x-small, normal);
+    };
 }
 .btn-default, .linkbtn-default {
-    @include var-components(compVar('xx-medium') compVar('x-big'), x-small, normal)
+    @include var-components(compVar('xx-medium') compVar('x-big'), x-small, normal);
+    @include mq($bp-large) {
+        @include var-components(compVar('x-medium') compVar('xxx-big'), x-small, x-big);
+    };
 }
 .btn-big, .linkbtn-big {
-    @include var-components(compVar('x-medium') compVar('xxx-big'), x-small, x-big)
+    @include var-components(compVar('x-medium') compVar('xxx-big'), x-small, x-big);
+    @include mq($bp-large) {
+        @include var-components(compVar('medium') compVar('x-huge'), x-small, xx-big);
+    };
 }
 .btn-xbig, .linkbtn-xbig {
     @include var-components(compVar('medium') compVar('x-huge'), x-small, xx-big)
@@ -145,6 +157,16 @@ a {
     &:focus-visible {
         box-shadow: 3px 3px 0px 0px;
     }
+    @include mq($bp-large) {
+        &:hover {
+            box-shadow: 3px 3px 0px 0px;
+            border: 1px solid;
+        }
+        &:focus,
+        &:focus-visible {
+            box-shadow: 4px 4px 0px 0px;
+        }
+    }
 }
 .btn-small, .btn-default {
     &:hover {
@@ -154,6 +176,16 @@ a {
     &:focus,
     &:focus-visible {
         box-shadow: 4px 4px 0px 0px;
+    }
+    @include mq($bp-large) {
+        &:hover {
+            box-shadow: 4px 4px 0px 0px;
+            border: 1px solid;
+        }
+        &:focus,
+        &:focus-visible {
+            box-shadow: 6px 6px 0px 0px;
+        }
     }
 }
 .btn-big, .btn-xbig {
@@ -187,6 +219,31 @@ a {
             }
         }
     }
+    @include mq($bp-large) {
+        & .line__linkbtn {
+            height: 2px;
+        }
+        & .icon {
+            width: compVar(x-normal);
+            height: auto;
+        }
+        &:hover,
+        &:focus,
+        &:focus-visible {
+            @include var-components(compVar('small') compVar('small') compVar('small') compVar('xx-normal'), x-small, medium);
+            & .text__linkbtn {
+                gap: compVar(x-small) + (compVar(xx-normal) - compVar(small));
+            }
+            & .line__linkbtn {
+                width: compVar(x-normal);
+                height: compVar(x-normal);
+                &::before {
+                    width: compVar(x-medium);
+                    height: compVar(x-medium);
+                }
+            }
+        }
+    }
 }
 .linkbtn-small {
     & .line__linkbtn {
@@ -209,6 +266,31 @@ a {
             &::before {
                 width: compVar(x-medium);
                 height: compVar(x-medium);
+            }
+        }
+    }
+    @include mq($bp-large) {
+        & .line__linkbtn {
+            height: 2px;
+        }
+        & .icon {
+            width: compVar(big);
+            height: auto;
+        }
+        &:hover,
+        &:focus,
+        &:focus-visible {
+            @include var-components(compVar('xx-medium') compVar('xx-medium') compVar('xx-medium') compVar('x-big'), x-small, normal);
+            & .text__linkbtn {
+                gap: compVar(x-small) + (compVar(x-big) - compVar(xx-medium));
+            }
+            & .line__linkbtn {
+                width: compVar(big);
+                height: compVar(big);
+                &::before {
+                    width: compVar(normal);
+                    height: compVar(normal);
+                }
             }
         }
     }
@@ -237,6 +319,31 @@ a {
             }
         }
     }
+    @include mq($bp-large) {
+        & .line__linkbtn {
+            height: 3px;
+        }
+        & .icon {
+            width: compVar(xxx-big);
+            height: auto;
+        }
+        &:hover,
+        &:focus,
+        &:focus-visible {
+            @include var-components(compVar('x-medium') compVar('x-medium') compVar('x-medium') compVar('xxx-big'), x-small, x-big);
+            & .text__linkbtn {
+                gap: compVar(x-small) + (compVar(xxx-big) - compVar(x-medium));
+            }
+            & .line__linkbtn {
+                width: compVar(xxx-big);
+                height: compVar(xxx-big);
+                &::before {
+                    width: compVar(x-small) * 3;
+                    height: compVar(x-small) * 3;
+                }
+            }
+        }
+    }
 }
 .linkbtn-big {
     & .line__linkbtn {
@@ -259,6 +366,31 @@ a {
             &::before {
                 width: compVar(x-small) * 3;
                 height: compVar(x-small) * 3;
+            }
+        }
+    }
+    @include mq($bp-large) {
+        & .line__linkbtn {
+            height: 3px;
+        }
+        & .icon {
+            width: 68px;
+            height: auto;
+        }
+        &:hover,
+        &:focus,
+        &:focus-visible {
+            @include var-components(compVar('medium') compVar('medium') compVar('medium') compVar('x-huge'), x-small, xx-big);
+            & .text__linkbtn {
+                gap: compVar(x-small) + (compVar(x-huge) - compVar(medium));
+            }
+            & .line__linkbtn {
+                width: compVar(xx-huge);
+                height: compVar(xx-huge);
+                &::before {
+                    width: compVar(big);
+                    height: compVar(big);
+                }
             }
         }
     }

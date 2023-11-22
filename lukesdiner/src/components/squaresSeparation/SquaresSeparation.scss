@@ -1,0 +1,18 @@
+@import '../../scss/global.scss';
+
+.squareSeparation {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+.lineup__squareSeparation, .linedown__squareSeparation {
+    display: flex;
+    gap: 50px;
+    height: fit-content;
+    width: fit-content;
+    overflow: hidden;
+    @include mq($bp-large) {
+        gap: 80px;
+    }
+}

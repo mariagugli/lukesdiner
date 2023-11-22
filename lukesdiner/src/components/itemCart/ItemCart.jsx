@@ -12,7 +12,7 @@ export default function ItemCart(props) {
             src={props.img} 
             alt={props.altltimg} 
         />
-        <Icon  
+        <Icon
             className={props.iconClass ? `icon__itemCart ${props.iconClass}` : 'icon__itemCart'} 
             name='cross' 
         />

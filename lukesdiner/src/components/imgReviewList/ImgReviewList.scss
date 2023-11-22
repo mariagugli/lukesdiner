@@ -1,0 +1,20 @@
+@import '../../scss/global.scss';
+
+.imgReviews {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+    gap: compVar(xx-medium);
+    @include mq($bp-large) {
+        flex-direction: row;
+    }
+}
+.line__imgReviews {
+    display: flex;
+    align-items: flex-start;
+    gap: compVar(xx-medium);
+}
+

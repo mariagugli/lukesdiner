@@ -48,7 +48,7 @@
     border-radius: compVar(xxx-small);
     background-color: $color-secondary;
 }
-.topbarMenu {
+.nav__topbar {
     display: none;
     @include mq() {
         display: flex;
@@ -60,7 +60,7 @@
         @include var-components(compVar(normal) compVar(x-normal), x-huge);
     }
 }
-.link__topbarMenu {
+.link__nav {
     text-decoration: none;
     font-family: 'Vickie';
     &:hover,

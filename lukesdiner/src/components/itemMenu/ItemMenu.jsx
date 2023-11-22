@@ -19,7 +19,7 @@ export default function ItemMenu(props) {
             isLinkBtnStyle={true} 
             to={props.linkto} 
             size={props.btnsize} 
-            className={props.btnclassName}
+            className={props.btnclassName ? `btn__itemMenu ${props.btnclassName}` : 'btn__itemMenu'}
             text={props.btntext} />
     </li>
 }

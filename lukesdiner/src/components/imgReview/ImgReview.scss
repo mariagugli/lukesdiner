@@ -1,0 +1,13 @@
+@import '../../scss/global.scss';
+
+.imgReview {
+    width: 8.75rem;
+    height: 13.6875rem;
+    border-radius: compVar(xx-huge);
+    object-fit: cover;
+    @include mq() {
+        width: 13.25rem;
+        height: 20.8125rem;
+        border-radius: compVar(huge) * 5;
+    }
+}

@@ -3,22 +3,45 @@
 .main__home {
     padding: 0;
     width: 100%;
+    background-color: $turquoise;
 }
 .sectionHome__pattern {
     padding: compVar(xx-huge) compVar(x-normal);
-}
-.section__intro {
     display: flex;
     flex-direction: column;
+}
+.section__intro {
     justify-content: space-between;
     align-items: center;
     height: calc(100svh - compVar(xx-huge) * 2);
     width: calc(100% - compVar(x-normal) * 2);
-    background: url('../../../public/imgs/cups-lukes-navybg.webp') no-repeat;
+    background: url('../../../../imgs/cups-lukes-navybg.webp') no-repeat;
     background-size: cover;
 }
 .section__menu {
     background-color: $navy__lighter;
+}
+.section__about {
+    position: relative;
+    align-items: center;
+    border-radius: 0rem 0rem 2.625rem 2.625rem;
+    background-color: $color-primary;
+    padding: 12rem 2.25rem 8rem 2.25rem;
+    gap: compVar(x-huge);
+}
+.section__reviews {
+    align-items: center;
+    padding: compVar(xx-huge) 0;
+    gap: compVar(xx-big);
+}
+.section__community {
+    background-image: url('../../../../imgs/peoplehangingout.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: center;
+    @include mq($bp-large) {
+        padding: 14.25rem 25.75rem;
+    }
 }
 .article__sloganIntro {
     display: flex;
@@ -27,8 +50,64 @@
     height: calc(100% - compVar(huge));
     width: 100%;
 }
+.article__about {
+    display: flex;
+    justify-content: space-between;
+    gap: compVar(xx-medium);
+}
+.article__reviews {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: calc(100% - compVar(xxx-normal) * 2);
+    @include var-components(0 compVar(xxx-normal), big);
+    @include mq() {
+        @include var-components(0 compVar(x-huge) * 3, big);
+        width: calc(100% - (compVar(x-huge) * 3) * 2);
+    }
+    @include mq($bp-large) {
+        @include var-components(0 compVar(huge) * 9, big);
+        width: calc(100% - (compVar(huge) * 9) * 2);
+    }
+}
+.article__community {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    @include var-components(compVar(xx-normal) * 4 compVar(xx-huge), x-normal);
+    background-image: url('../../../../svgs/bg-sticker.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    @include mq($bp-large) {
+        @include var-components(compVar(xx-normal) * 5 compVar(xx-huge), big);
+    }
+}
+.infoluke__articleAbout {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.squareSeparation__home {
+    position: absolute;
+    top: -3.24rem;
+    @include mq($bp-large) {
+        top: -5.18rem;
+    }
+}
 .title__sectionMenu {
     color: $turquoise;
     text-align: center;
     padding: compVar(normal) 0;
+}
+.title__community {
+    font-family: 'Vickie';
+}
+.imgLuke__articleAbout {
+    width: 10.0625rem;
+    height: 14rem;
+    border-radius: compVar(normal);
+    object-fit: cover;
+    box-shadow: 4px 4px 0px 0px $color-secondary;
 }

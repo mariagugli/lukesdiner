@@ -51,13 +51,15 @@ $alert__blue__dark: #2D489F;
 $alert__blue__darker: #192857;
 
 $color-list: (
-  'navy': $navy,
-  'yellow': $yellow,
-  'turquoise': $turquoise,
-  'grayblue': $grayblue,
-  'black': $black,
-  'gray__darker': $gray__darker,
-  'white': $white
+  'navy'              : $navy,
+  'navy__lighter'     : $navy__lighter,
+  'yellow'            : $yellow,
+  'turquoise'         : $turquoise,
+  'turquoise__darker' : $turquoise__darker,
+  'grayblue'          : $grayblue,
+  'black'             : $black,
+  'gray__darker'      : $gray__darker,
+  'white'             : $white
 );
 
 $color-primary: map-get($color-list,'navy');

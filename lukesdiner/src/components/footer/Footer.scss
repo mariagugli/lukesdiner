@@ -1,0 +1,42 @@
+@import '../../scss/global.scss';
+
+a {
+    text-decoration: none;
+}
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: compVar(xxx-normal) * 2 0rem;
+    gap: compVar(xxx-big);
+    width: 100%;
+    position: relative;
+    background-color: $color-primary;
+}
+.sectionFooter__pattern {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0rem compVar(xxx-normal);
+    gap: compVar(huge);
+    width: calc(100% - compVar(xxx-normal) * 2);
+}
+.input__newsletter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: compVar(normal);
+}
+.title__newsletter {
+    font-family: 'Vickie';
+}
+.squareSeparation__home {
+    position: absolute;
+    top: -6.125rem;
+    & .linedown__squareSeparation {
+        padding-left: 50px;
+    }
+}
+.logo__footer path {
+    fill: $white;
+}

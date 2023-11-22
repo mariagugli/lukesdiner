@@ -8,6 +8,7 @@ import Styleguide from './styleguide/Styleguide'
 import Topbar from './components/topbar/Topbar'
 import BurgerMenu from './components/burgerMenu/BurgerMenu'
 import { useState } from 'react'
+import Footer from './components/footer/Footer'
 
 function App() {
 
@@ -48,6 +49,7 @@ function App() {
           <Route path="/styleguide" element={<Styleguide />} />
         </Routes>
       </main>
+      <Footer />
     </>
   )
 }
