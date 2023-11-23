@@ -135,6 +135,32 @@
         border-width: 1.5px;
         border-radius: compVar(xxx-small) + 0.1rem;
     }
+    @include mq($bp-large) {
+        & .label, .input-checkbox:checked::after {
+            font-size: fs(x-small);
+        }
+        & .input {
+            border-bottom-width: 2px;
+            @include var-components(compVar(x-medium) compVar(normal), none, x-small);
+            &:focus,
+            &:focus-visible {
+                outline-width: 2px;
+                border-bottom: 2px solid transparent;
+            }
+        }
+        & .input-checkbox {
+            border-radius: compVar(xxx-small) + 0.15;
+        }
+        & .input-checkbox, .input-radio {
+            border-width: 2px;
+            width: 1.25rem;
+            height: 1.25rem;
+        }
+        & .input-radio:checked::after {
+            width: compVar(x-small);
+            height: compVar(x-small);
+        }
+    }
 
 }
 .input-small {
@@ -162,7 +188,32 @@
         width: compVar(x-small);
         height: compVar(x-small);
     }
-
+    @include mq($bp-large) {
+        & .label, .input-checkbox:checked::after {
+            font-size: fs(small);
+        }
+        & .input {
+            border-bottom-width: 2px;
+            @include var-components(compVar(medium) compVar(xx-normal), none, small);
+            &:focus,
+            &:focus-visible {
+                outline-width: 2px;
+                border-bottom: 2px solid transparent;
+            }
+        }
+        & .input-checkbox {
+            border-radius: compVar(xx-small);
+        }
+        & .input-checkbox, .input-radio {
+            border-width: 2px;
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+        & .input-radio:checked::after {
+            width: compVar(xx-medium);
+            height: compVar(xx-medium);
+        }
+    }
 }
 .input-default {
     & .label, .input-checkbox:checked::after {
@@ -188,6 +239,34 @@
     & .input-radio:checked::after {
         width: compVar(xx-medium);
         height: compVar(xx-medium);
+    }
+    @include mq($bp-large) {
+        & .input, .input-checkbox:checked::after {
+            border-bottom-width: 3px;
+            padding: compVar(normal) compVar(x-big);
+        }
+        & .input, .label, .input-checkbox:checked::after {
+            font-size: fs(normal);
+        }
+        & .input {
+            &:focus,
+            &:focus-visible {
+                outline-width: 3px;
+                border-bottom: 3px solid transparent;
+            }
+        }
+        & .input-checkbox {
+            border-radius: compVar(small);
+        }
+        & .input-checkbox, .input-radio {
+            border-width: 3px;
+            width: 2.5rem;
+            height: 2.5rem;
+        }
+        & .input-radio:checked::after {
+            width: compVar(normal);
+            height: compVar(normal);
+        }
     }
 }
 .input-big, .input-xbig {
@@ -220,6 +299,27 @@
     & .input-radio:checked::after {
         width: compVar(normal);
         height: compVar(normal);
+    }
+    @include mq($bp-large) {
+        & .input, .label {
+            font-size: fs(big);
+            font-weight: fw(semibold);
+        }
+        & .input-checkbox {
+            width: 2.75rem;
+            height: 2.75rem;
+            &:checked::after {
+                font-size: fs(big);
+            }
+        }
+        & .input-radio {
+            width: 2.75rem;
+            height: 2.75rem;
+            &:checked::after {
+                width: compVar(x-normal);
+                height: compVar(x-normal);
+            }
+        }
     }
 }
 .input-xbig {

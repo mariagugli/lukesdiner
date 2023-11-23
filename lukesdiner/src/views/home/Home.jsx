@@ -13,7 +13,13 @@ export default function Home() {
             <article className="article__sloganIntro">
                 <Slogan size='xsmall' color='yellow'/>
             </article>
-            <Btn type='secondary' size='big' text='Order'/>
+            <Btn 
+                isLinkBtnStyle={true}
+                to='/menu'
+                type='secondary' 
+                size='big' 
+                text='Order'
+            />
         </section>
         <section className="section__menu sectionHome__pattern">
             <article className='article__sectionMenu'>
@@ -29,20 +35,23 @@ export default function Home() {
                 colorlineup='navy' 
                 colorlinedown='navy__lighter'
             />
-            <h2 className='h1 text-yellow'>Who <br/> makes <br/> your food</h2>
             <article className="article__about">
+                <h2 className='h1 text-yellow'>Who <br/> makes <br/> your food</h2>
                 <div className="infoluke__articleAbout">
-                    <p className='text-white'>Hey, this is Luke. Incase you still don’t know me or my team, have a look and enjoy knowing a little more about us and our history.</p>
-                    <Btn 
-                        isLinkBtnStyle={true}
-                        type='secondary' 
-                        to='/aboutus'
-                        size='small' 
-                        text='Meet us'
-                    />
+                    <div className="description__infoLuke">
+                        <p className='text-white'>Hey, this is Luke. Incase you still don’t know me or my team, have a look and enjoy knowing a little more about us and our history.</p>
+                        <Btn 
+                            isLinkBtnStyle={true}
+                            type='secondary' 
+                            to='/aboutus'
+                            size='small' 
+                            text='Meet us'
+                        />
+                    </div>
+                    <img className='imgLuke__articleAbout' src="../../imgs/team/luke.webp" alt="Luke Danes, owner of Luke's Diner" />
                 </div>
-                <img className='imgLuke__articleAbout' src="../../imgs/team/luke.webp" alt="Luke Danes, owner of Luke's Diner" />
             </article>
+            
         </section>
         <section className="sectionHome__pattern section__reviews">
             <ImgReviewList type='firstRound' />

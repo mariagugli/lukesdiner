@@ -5,6 +5,7 @@ a {
 }
 ul {
     padding: 0;
+    list-style-type: none
 }
 .footer {
     display: flex;
@@ -22,6 +23,10 @@ ul {
     padding: 0rem compVar(xxx-normal);
     gap: compVar(huge);
     width: calc(100% - compVar(xxx-normal) * 2);
+    @include mq($bp-large) {
+        padding: 0rem 5.25rem;
+        width: calc(100% - 5.25rem * 2);
+    }
 }
 .section__menus {
     align-items: flex-start;
@@ -32,6 +37,10 @@ ul {
     flex-direction: column;
     align-items: center;
     gap: compVar(normal);
+    @include mq() {
+        flex-direction: row;
+        align-items: flex-end;
+    }
 }
 .title__newsletter {
     font-family: 'Vickie';
@@ -42,6 +51,12 @@ ul {
     justify-content: space-between;
     width: calc(100% - compVar(x-small) * 2);
     padding: 0 compVar(x-small);
+}
+.main__menusFooter {
+    @include mq() {
+        justify-content: flex-start;
+        gap: compVar(xx-huge) * 2;
+    }
 }
 .squareSeparation__footer {
     position: absolute;
@@ -56,6 +71,9 @@ ul {
         }
     }
 }
-.logo__footer path {
+.itemSM__footer {
+    color: $white;
+}
+.logo__footer path, .icon__footer path {
     fill: $white;
 }

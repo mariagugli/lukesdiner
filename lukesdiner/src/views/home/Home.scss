@@ -28,11 +28,9 @@
     position: relative;
     border-radius: 0rem 0rem 2.625rem 2.625rem;
     background-color: $color-primary;
-    padding: 12rem 2.25rem 8rem 2.25rem;
-    gap: compVar(x-huge);
+    padding: 12rem 0 8rem 0;
     @include mq($bp-large) {
-        flex-direction: row;
-        padding: 16rem 5.25rem 10rem 5.25rem;
+        padding: 16rem 0 10rem 0;
     }
 }
 .section__reviews {
@@ -59,26 +57,17 @@
     height: calc(100% - compVar(huge));
     width: 100%;
 }
-.article__sectionMenu {
-    padding: 0 compVar(x-normal);
+.article__sectionMenu, .article__about {
+    padding: 0 compVar(xxx-normal);
     @include mq($bp-large) {
         padding: 0 5.25rem;
     }
 }
 .article__about {
     display: flex;
-    justify-content: space-between;
-    gap: compVar(xx-medium);
-    width: 100%;
-    @include mq() {
-        display: flex;
-        padding: compVar(medium) compVar(xx-medium);
-        justify-content: flex-end;
-        align-items: flex-end;
-        gap: compVar(normal);
-    }
+    gap: compVar(x-huge);
     @include mq($bp-large) {
-        width: fit-content;
+        flex-direction: row;
     }
 }
 .article__reviews {
@@ -93,8 +82,8 @@
         width: calc(100% - (compVar(x-huge) * 3) * 2);
     }
     @include mq($bp-large) {
-        @include var-components(0 compVar(huge) * 9, big);
-        width: calc(100% - (compVar(huge) * 9) * 2);
+        @include var-components(0 compVar(huge) * 6, big);
+        width: calc(100% - (compVar(huge) * 6) * 2);
     }
 }
 .article__community {
@@ -119,6 +108,22 @@
 
 //      DIVS        //
 .infoluke__articleAbout {
+    display: flex;
+    justify-content: space-between;
+    gap: compVar(xx-medium);
+    width: 100%;
+    @include mq() {
+        display: flex;
+        padding: compVar(medium) compVar(xx-medium);
+        justify-content: flex-end;
+        align-items: flex-end;
+        gap: compVar(normal);
+    }
+    @include mq($bp-large) {
+        width: fit-content;
+    }
+}
+.description__infoLuke {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
