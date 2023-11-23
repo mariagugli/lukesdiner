@@ -16,6 +16,9 @@ h1, .h1 {
     font-weight: fw(bold);
     font-family: 'Vickie';
     @include mq() {
+        font-size: fs(xxx-big);
+    }
+    @include mq($bp-large) {
         font-size: fs(huge);
     }
 }

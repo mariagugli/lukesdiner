@@ -2,12 +2,21 @@
 
 .slogan-xsmall {
     width: 291px;
+    @include mq() {
+        width: 439px;
+    }
 };
 .slogan-small {
     width: 439px;
+    @include mq() {
+        width: 528px;
+    }
 };
 .slogan-default {
     width: 528px;
+    @include mq() {
+        width: 689px;
+    }
 };
 .slogan-big {
     width: 689px;

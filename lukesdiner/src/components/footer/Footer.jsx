@@ -8,7 +8,7 @@ import './Footer.scss'
 export default function Footer(props) {
     return <footer className={props.className ? `footer ${props.className}` : 'footer'}>
         <SquaresSeparation
-            className='squareSeparation__home'
+            className='squareSeparation__footer'
             colorlineup='navy'
             colorlinedown='navy'
         />
@@ -29,7 +29,7 @@ export default function Footer(props) {
                 />
             </div>
         </section>
-        <section className="sectionFooter__pattern">
+        <section className="sectionFooter__pattern section__menus">
             <Logo name='logo-name'className='logo__footer' />
             <div className='menu__footer'>
                 <ul className="mainMenu__footer">
@@ -51,7 +51,13 @@ export default function Footer(props) {
                 </ul>
                 <ul className="legalMenu__footer">
                     <li>
-                        <Link></Link>
+                        <Link className='text-white'>Cookies</Link>
+                    </li>
+                    <li>
+                        <Link className='text-white'>Terms & Conditions</Link>
+                    </li>
+                    <li>
+                        <Link className='text-white'>Privacy Policy</Link>
                     </li>
                 </ul>
             </div>

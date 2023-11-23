@@ -57,7 +57,10 @@
         border-radius: compVar(x-big);
         background: rgba(255, 255, 255, 0.89);
         height: fit-content;
-        @include var-components(compVar(normal) compVar(x-normal), x-huge);
+        @include var-components(compVar(normal) compVar(x-normal), xx-normal);
+    }
+    @include mq($bp-large) {
+        gap: compVar(x-huge)
     }
 }
 .link__nav {

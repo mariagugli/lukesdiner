@@ -16,8 +16,11 @@ export default function Home() {
             <Btn type='secondary' size='big' text='Order'/>
         </section>
         <section className="section__menu sectionHome__pattern">
-            <h1 className='title__sectionMenu'>Delicious healthy food</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint hic voluptates magnam magni vitae, pariatur omnis, harum odio fugiat aspernatur officia accusantium eveniet totam inventore delectus possimus culpa deleniti ea.</p>
+            <article className='article__sectionMenu'>
+                <h1 className='title__sectionMenu'>Delicious <br/> healthy food</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint hic voluptates magnam magni vitae, pariatur omnis, harum odio fugiat aspernatur officia accusantium eveniet totam inventore delectus possimus culpa deleniti ea.</p>
+            </article>
+            
             <ListMenu />
         </section>
         <section className="sectionHome__pattern section__about">
@@ -26,11 +29,17 @@ export default function Home() {
                 colorlineup='navy' 
                 colorlinedown='navy__lighter'
             />
-            <h2 className='h1 text-yellow'>Who makes your food</h2>
+            <h2 className='h1 text-yellow'>Who <br/> makes <br/> your food</h2>
             <article className="article__about">
                 <div className="infoluke__articleAbout">
                     <p className='text-white'>Hey, this is Luke. Incase you still don’t know me or my team, have a look and enjoy knowing a little more about us and our history.</p>
-                    <Btn type='secondary' size='small' text='Meet us'/>
+                    <Btn 
+                        isLinkBtnStyle={true}
+                        type='secondary' 
+                        to='/aboutus'
+                        size='small' 
+                        text='Meet us'
+                    />
                 </div>
                 <img className='imgLuke__articleAbout' src="../../imgs/team/luke.webp" alt="Luke Danes, owner of Luke's Diner" />
             </article>
@@ -38,7 +47,7 @@ export default function Home() {
         <section className="sectionHome__pattern section__reviews">
             <ImgReviewList type='firstRound' />
             <article className="article__reviews">
-                <h2 className=' h1 text-turquoise__darker'>Share your burger tale</h2>
+                <h2 className=' h1 text-turquoise__darker'>Share <br/> your <br/> burger <br/> tale</h2>
                 <p className="h5">We always love to hear about how you find out your meal. Come on! Let’s create a great history together.</p>
             </article>
             <div>
@@ -66,7 +75,7 @@ export default function Home() {
                     to='/sponsorship'
                     type='primary'
                     size='xsmall'
-                    text='Know more' 
+                    text='Know more'
                 />
             </article>
         </section>
