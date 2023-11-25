@@ -1,0 +1,24 @@
+@import '../../scss/global.scss';
+
+.extraInfo__memberCard {
+    border-radius: compVar(x-big);
+    background-color: rgba(255, 255, 255, 0.93);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    margin: 0 compVar(x-normal);
+    @include var-components(compVar(x-normal) compVar(big), x-small);
+    position: absolute;
+}
+.section__memberCard {
+    display: flex;
+    flex-direction: column;
+    gap: compVar(xx-normal);
+}
+.title__memberCard {
+    text-align: right;
+}
+.question__titleMemberCard {
+    font-family: 'Vickie';
+}

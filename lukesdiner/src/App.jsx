@@ -37,6 +37,7 @@ function App() {
       </header>
       <main className={location.pathname === '/styleguide' ? 'main__styleguide'
         : location.pathname === '/' ? 'main__home'
+        :location.pathname === '/aboutus' ? 'main__about'
         :'main'
       }>
 

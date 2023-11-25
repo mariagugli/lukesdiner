@@ -65,6 +65,7 @@
 }
 .article__about {
     display: flex;
+    flex-direction: column;
     gap: compVar(x-huge);
     @include mq($bp-large) {
         flex-direction: row;

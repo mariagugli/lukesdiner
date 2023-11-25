@@ -1,1 +1,156 @@
-@import '../../scss/global.scss'
+@import '../../scss/global.scss';
+
+.main__about {
+    background-color: $navy__lighter;
+}
+
+//      SECTIONS        //
+.sectionAbout__pattern {
+    padding: compVar(xx-huge) compVar(x-normal);
+    display: flex;
+    flex-direction: column;
+    @include mq($bp-large) {
+        padding: compVar(xx-huge) 5.25rem;
+    }
+}
+.section__history, .section__team {
+    background-color: $turquoise;
+}
+.section__history {
+    padding: compVar(huge) * 3 0;
+}
+.section__team {
+    padding: compVar(xx-huge) compVar(xxx-normal) compVar(huge) * 3 compVar(xxx-normal);
+    @include mq() {
+        padding: compVar(xx-huge) 5.25rem compVar(huge) * 3 5.25rem;
+    }
+}
+
+//      ARTICLES        //
+.article__history {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: compVar(xxx-big) compVar(xxx-normal);
+    gap: compVar(x-normal);
+    @include mq($bp-large) {
+        padding: compVar(xx-huge) compVar(huge) * 3;
+    }
+}
+
+//      DIVS        //
+
+
+//      SPANS       //
+.cupsbg {
+    background-repeat: repeat-x;
+    background-size: 620px;
+    background-position: top;
+    width: 100%;
+    height: 152px;
+    @include mq() {
+        background-size: 823px;
+        height: 130px;
+    }
+}
+.cupsbg--v1 {
+    background-image: url(../../../public/svgs/coffeeCups-designV1.svg);
+}
+.cupsbg--v2 {
+    background-image: url(../../../public/svgs/coffeeCups-designV2.svg);
+}
+
+//      LISTS       //
+.btn-memberTeam {
+    background: none;
+    border: none;
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0rem compVar(medium);
+    gap: compVar(x-normal);
+    margin: 0;
+    color: $color-primary;
+    text-align: left;
+    & p {
+        font-family: 'Red Hat Display', sans-serif;
+    }
+    @include mq() {
+        width: min-content;
+    }
+    &:hover,
+    &:focus,
+    &:focus-visible {
+        outline: none;
+        border: none;
+        box-shadow: none;
+        & .img__itemMember, .img__imgItem {
+            border-radius: 18.75rem;
+            transition: border-radius 0.2s;
+        }
+        & .img__imgItem {
+            filter: grayscale(0%);
+        }
+    }
+}
+.list__members {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: compVar(xx-huge) compVar(xx-normal) 0rem compVar(xx-normal);
+    gap: compVar(big) * 2;
+    @include mq() {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+        padding: compVar(xx-huge) 0 0 0;
+    }
+}
+.item__member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: compVar(x-normal);
+    @include mq() {
+        padding: 0rem compVar(medium);
+        width: min-content;
+    }
+}
+//      SPECIFICS       //
+.logoName path {
+    fill: $white;
+}
+.img__itemMember {
+    width: 100%;
+    height: 22.1875rem;
+    object-fit: cover;
+    border-radius: compVar(xx-normal);
+    box-shadow: 6px 6px 0px 0px $color-secondary;
+    @include mq() {
+        height: 27.8125rem;
+        min-width: 21.125rem;
+        border-radius: compVar(x-big);
+    }
+    @include mq($bp-large) {
+        width: 20rem;
+    }
+}
+.img__imgItem {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: compVar(xx-normal);
+    filter: grayscale(100%); 
+    -webkit-filter: grayscale(100%);
+    @include mq() {
+        border-radius: compVar(x-big);
+    }
+}
+.h2.name__itemMember {
+    font-family: 'Vickie';
+    @include mq($bp-large) {
+        font-size: fs(xx-big);
+    }
+}

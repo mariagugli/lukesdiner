@@ -18,17 +18,6 @@
 .logo__topbar__burgerMenu path {
     fill: $black;
 }
-.btn-close {
-    background: none;
-    border: none;
-    &:hover,
-    &:focus,
-    &:focus-visible {
-        border: none;
-        box-shadow: none;
-        outline: none;
-    }
-}
 .list__socialMenu {
     display: flex;
     justify-content: space-around;

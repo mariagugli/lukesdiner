@@ -3,6 +3,7 @@
 .topbar {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: calc(100% - compVar(big) * 2);
     padding: compVar(big);
 }

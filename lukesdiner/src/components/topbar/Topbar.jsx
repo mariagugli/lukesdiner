@@ -7,7 +7,7 @@ export default function Topbar(props) {
     return <div className={props.className ? `topbar ${props.className}` : 'topbar'}>
         <Logo name='logo-symbol' className={props.logoClass ? props.logoClass : ''} />
         <Btn 
-            type='burgerMenu' 
+            type='burgerMenu'
             className={props.btnBurgerMenuClass ? `burgerMenu--closed ${props.btnBurgerMenuClass}` : 'burgerMenu--closed'}
             onClick={props.handleBtnBurgerMenu}
             >
