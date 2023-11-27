@@ -21,3 +21,13 @@
 .slogan-big {
     width: 689px;
 };
+
+.svgTitle {
+    @include mq() {
+        height: 15.5625rem;
+    }
+    @include mq($bp-large) {
+        width: 61.1875rem;
+        height: 18.9375rem;
+    }
+}

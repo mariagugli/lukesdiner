@@ -2,6 +2,8 @@
 
 .main__about {
     background-color: $navy__lighter;
+    width: 100%;
+    padding: 0;
 }
 
 //      SECTIONS        //
@@ -25,16 +27,67 @@
         padding: compVar(xx-huge) 5.25rem compVar(huge) * 3 5.25rem;
     }
 }
+.section__philosophy {
+    padding: compVar(huge) * 4 compVar(xxx-normal) compVar(huge) * 2;
+    gap: 5.75rem;
+    border-radius: 0rem 0rem compVar(x-big) compVar(x-big);
+    background-color: $turquoise;
+}
+.section__commitment {
+    padding: compVar(huge) * 2 compVar(xxx-normal);
+    gap: compVar(small);
+}
+.section__philosophy, .section__commitment {
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    width: calc(100% - compVar(xxx-normal) * 2);
+    @include mq($bp-large) {
+        padding: compVar(huge) * 4 5.25rem;
+        gap: 9rem;
+        width: calc(100% - 5.25rem * 2);
+    }
+}
+.section__contact {
+    align-items: center;
+    overflow: hidden;
+    padding: 5.75rem 0rem 11.625rem 0rem;
+    gap: 5.75rem;
+}
 
 //      ARTICLES        //
-.article__history {
+.articleAbout__pattern {
     display: flex;
     flex-direction: column;
+}
+.article__history {
     align-items: center;
     padding: compVar(xxx-big) compVar(xxx-normal);
     gap: compVar(x-normal);
     @include mq($bp-large) {
         padding: compVar(xx-huge) compVar(huge) * 3;
+    }
+}
+.article__commitmentSection {
+    @include var-components(compVar(medium) 0 0 compVar(huge) * 2, x-normal);
+    @include mq() {
+        @include var-components(compVar(medium) 0 0 compVar(xxx-big) * 4, x-big);
+    }
+    @include mq($bp-large) {
+        @include var-components(compVar(medium) 0 0 compVar(x-huge) * 8, xx-huge);
+    }
+}
+.article__contactSection {
+    align-items: center;
+    text-align: center;
+    @include var-components(0 compVar(xxx-normal), big, medium, calc(100% - compVar(xxx-normal) * 2));
+    @include mq() {
+        @include var-components(0 compVar(x-huge) * 3, big);
+        width: calc(100% - (compVar(x-huge) * 3) * 2);
+    }
+    @include mq($bp-large) {
+        @include var-components(0 compVar(huge) * 6, big);
+        width: calc(100% - (compVar(huge) * 6) * 2);
     }
 }
 
@@ -152,5 +205,49 @@
     font-family: 'Vickie';
     @include mq($bp-large) {
         font-size: fs(xx-big);
+    }
+}
+.img__philosophySection, .img__commitmentSection {
+    width: 17.5rem;
+    height: 21.125rem;
+    position: absolute;
+    border-radius: 7.5rem;
+    object-fit: cover;
+    z-index: -1;
+    @include mq() {
+        width: 23.4375rem;
+        height: 28.3125rem;
+        border-radius: 11.25rem;
+    }
+    @include mq($bp-large) {
+        width: 40.4375rem;
+        border-radius: 15rem;
+    }
+}
+.img__philosophySection {
+    right: -3.1rem;
+    top: 1.375rem;
+    @include mq() {
+        right: -11.6875rem;
+        top: -0.0425rem;
+    }
+    @include mq($bp-large) {
+        right: -8.4375rem;
+        top: 0;
+    }
+}
+.title__commitmentSection, .title__articleContact {
+    font-family: 'Vickie';
+}
+.img__commitmentSection {
+    left: -10rem;
+    top: 8.62875rem;
+    @include mq() {
+        left: -13.3125rem;
+        top: 5.9175rem;
+    }
+    @include mq($bp-large) {
+        left: -16.5625rem;
+        top: 28rem;
     }
 }

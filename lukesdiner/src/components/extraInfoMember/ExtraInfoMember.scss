@@ -8,8 +8,13 @@
     align-items: flex-end;
     justify-content: center;
     margin: 0 compVar(x-normal);
-    @include var-components(compVar(x-normal) compVar(big), x-small);
+    z-index: 1;
+    @include var-components(compVar(x-normal) compVar(big), x-small, medium, min-content);
     position: absolute;
+    @include mq($bp-large) {
+        margin: 0 16rem;
+        padding: compVar(xx-huge) compVar(xxx-big) * 2;
+    }
 }
 .section__memberCard {
     display: flex;
