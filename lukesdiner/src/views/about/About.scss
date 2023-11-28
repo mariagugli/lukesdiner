@@ -172,6 +172,7 @@
     }
 }
 //      SPECIFICS       //
+    //      IMGS-SVGS       //
 .logoName path {
     fill: $white;
 }
@@ -199,12 +200,6 @@
     -webkit-filter: grayscale(100%);
     @include mq() {
         border-radius: compVar(x-big);
-    }
-}
-.h2.name__itemMember {
-    font-family: 'Vickie';
-    @include mq($bp-large) {
-        font-size: fs(xx-big);
     }
 }
 .img__philosophySection, .img__commitmentSection {
@@ -236,9 +231,6 @@
         top: 0;
     }
 }
-.title__commitmentSection, .title__articleContact {
-    font-family: 'Vickie';
-}
 .img__commitmentSection {
     left: -10rem;
     top: 8.62875rem;
@@ -249,5 +241,12 @@
     @include mq($bp-large) {
         left: -16.5625rem;
         top: 28rem;
+    }
+}
+    //      TYPOS       //
+.h2.name__itemMember {
+    font-family: 'Vickie';
+    @include mq($bp-large) {
+        font-size: fs(xx-big);
     }
 }

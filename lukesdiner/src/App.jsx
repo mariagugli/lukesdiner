@@ -28,6 +28,7 @@ function App() {
         <Topbar 
           logoClass={location.pathname === '/sponsorship' ? 'logoSymbol__topbar--sponsorship'
           : 'logoSymbol'}
+          lineBurgerMenuClass={location.pathname === '/sponsorship' ? 'color-bg-turquoise' : ''}
           handleBtnBurgerMenu={handleShowBurgerMenu}
         />
         <BurgerMenu
@@ -38,6 +39,7 @@ function App() {
       <main className={location.pathname === '/styleguide' ? 'main__styleguide'
         : location.pathname === '/' ? 'main__home'
         :location.pathname === '/aboutus' ? 'main__about'
+        :location.pathname === '/sponsorship' ? 'main color-bg-turquoise__darker'
         :'main'
       }>
 

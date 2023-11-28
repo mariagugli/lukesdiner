@@ -11,9 +11,9 @@ export default function Topbar(props) {
             className={props.btnBurgerMenuClass ? `burgerMenu--closed ${props.btnBurgerMenuClass}` : 'burgerMenu--closed'}
             onClick={props.handleBtnBurgerMenu}
             >
-            <span className="line__burgerMenu--closed"></span>
-            <span className="line__burgerMenu--closed"></span>
-            <span className="line__burgerMenu--closed"></span>
+            <span className={props.lineBurgerMenuClass ? `line__burgerMenu--closed ${props.lineBurgerMenuClass}` : 'line__burgerMenu--closed'}></span>
+            <span className={props.lineBurgerMenuClass ? `line__burgerMenu--closed ${props.lineBurgerMenuClass}` : 'line__burgerMenu--closed'}></span>
+            <span className={props.lineBurgerMenuClass ? `line__burgerMenu--closed ${props.lineBurgerMenuClass}` : 'line__burgerMenu--closed'}></span>
         </Btn>
         <nav className="nav__topbar">
             <Link className={props.linkMenu ? `link__nav h6 ${props.linkMenu}` : 'link__nav h6 '} to='/' >Home</Link>

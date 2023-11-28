@@ -65,7 +65,7 @@ export default function About() {
         </section>
         <section className="sectionAbout__pattern section__commitment">
             <img className='img__commitmentSection' src="../../imgs/peoplehangingout.webp" alt="People hanging out, talking and eating pizza on a wood table." />
-            <h2 className='title__commitmentSection'>Our Commitment</h2>
+            <h2 className='title__sections'>Our Commitment</h2>
             <article className="articleAbout__pattern article__commitmentSection">
                 <p >At Luke's Diner, we're more than just a place to enjoy a hearty meal. We're a cornerstone of the community, dedicated to supporting and nourishing both the body and soul of our beloved Stars Hollow. Our commitment goes beyond the kitchen, as we actively participate in local initiatives, sponsor community events, and strive to make a positive impact in the lives of our friends and neighbors.</p>
                 <Btn 
@@ -80,7 +80,7 @@ export default function About() {
         <section className="sectionAbout__pattern section__contact">
             <ImgReviewList type='firstRound' />
             <article className="articleAbout__pattern article__contactSection">
-                <h2 className="h1 title__articleContact">JOIN OUR <br/> JOURNEY</h2>
+                <h2 className="h1 title__sections">JOIN OUR <br/> JOURNEY</h2>
                 <p className="h5">We invite you to be a part of our journey, whether you're a local regular or a visitor passing through. Explore our menu, discover our commitment to the community, and savor the unique atmosphere that makes Luke's Diner a cherished part of Stars Hollow's history. We're more than a diner; we're a home away from home</p>
                 <p className="h5">Thank you for choosing Luke's Diner, where every cup of coffee and every meal is served with a side of community spirit and a dash of love.</p>
                 <Btn

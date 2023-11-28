@@ -77,7 +77,7 @@ export default function Home() {
         </section>
         <section className="sectionHome__pattern section__community">
             <article className="article__community">
-                <h2 className='h3 title__community'>Community Nourishment</h2>
+                <h2 className='h3 title__sections'>Community Nourishment</h2>
                 <p>Discover How Luke's Diner Serves More Than Just Delicious Meals</p>
                 <Btn 
                     isLinkBtnStyle={true}
