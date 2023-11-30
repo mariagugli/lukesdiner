@@ -14,13 +14,13 @@ export default function Product(props) {
         <div className={props.btnsClass ? `btns__product ${props.btnsClass}`: 'btns__product'}>
             <Btn 
                 type='primary'
-                size={props.btnsize ? `product__size ${props.btnsize}`: 'product__size'} 
+                size={props.btnsize ? `product__size ${props.btnsize ? props.btnsize : ''}`: 'product__size'} 
                 text='Add to cart'
             />
             <Btn 
                 className={props.btninfoClass ? `btninfo__product ${props.btninfoClass}`: 'btninfo__product'}
                 type='secondary'
-                size={props.btnsize ? `product__size ${props.btnsize}`: 'product__size'}
+                size={props.btnsize ? `product__size ${props.btnsize ? props.btnsize : ''}`: 'product__size'}
                 text='i'
             />
         </div>

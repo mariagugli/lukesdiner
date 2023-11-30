@@ -1,4 +1,4 @@
-import { Route, Routes, useLocation } from 'react-router-dom'
+import { Route, Routes, useLocation, useParams } from 'react-router-dom'
 import Home from './views/home/Home'
 import About from './views/about/About'
 import Menu from './views/menu/Menu'
@@ -9,6 +9,7 @@ import Topbar from './components/topbar/Topbar'
 import BurgerMenu from './components/burgerMenu/BurgerMenu'
 import { useState } from 'react'
 import Footer from './components/footer/Footer'
+import { IMGCATEGORIES } from '../public/images-menuCategories'
 
 function App() {
 
@@ -22,10 +23,13 @@ function App() {
     setShowBurgerMenu('display--none');
   }
 
+  const listCategories = IMGCATEGORIES;
+
   return (
     <>
-      <header className='header__menu'>
+      <header className={location.pathname === '/menu' || location.pathname.startsWith('/menu/') ? 'header__menu' : ''}>
         <Topbar 
+        className={location.pathname === '/menu' || location.pathname.startsWith('/menu/') ? 'topbar__menuPage' : ''}
           logoClass={location.pathname === '/sponsorship' ?'logoSymbol__topbar--sponsorship'
           : 'logoSymbol'}
           lineBurgerMenuClass={location.pathname === '/sponsorship' ? 'color-bg-turquoise' : ''}
@@ -42,11 +46,10 @@ function App() {
         :location.pathname === '/sponsorship' ? 'main color-bg-turquoise__darker'
         :'main'
       }>
-
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/aboutus" element={<About />} />
-          <Route path="/menu" element={<Menu />} />
+          <Route path="/menu" element={<Menu />}/>
           <Route path="/menu/:categoryId" element={<Menu />} />
           <Route path="/sponsorship" element={<Sponsorship />} />
           <Route path="/contact" element={<Contact />} />

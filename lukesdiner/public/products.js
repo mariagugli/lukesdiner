@@ -183,14 +183,14 @@ export const PRODUCTS = [
     },
     {
         'id'        :   'pickles',
-        'name'      :   'pickles',
+        'name'      :   'Pickles',
         'price'     :   '$2.99',
         'category'  :   'sides',
         'img'       :   '/imgs/fotos-menu/sides/pickles.webp',
     },
     {
         'id'        :   'nachos',
-        'name'      :   'nachos',
+        'name'      :   'Nachos',
         'price'     :   '$3.99',
         'category'  :   'sides',
         'img'       :   '/imgs/fotos-menu/sides/nachos.webp',
@@ -235,7 +235,7 @@ export const PRODUCTS = [
         'name'      :   'Artichock Dip',
         'price'     :   '$6.99',
         'category'  :   'starters',
-        'img'       :   '/imgs/fotos-menu/starters/artichockdip.webp',
+        'img'       :   '/imgs/fotos-menu/starters/artichokedip.webp',
     },
     {
         'id'        :   'tavernsalad',
@@ -309,14 +309,14 @@ export const PRODUCTS = [
     },
     {
         'id'        :   'turkeysandwich',
-        'name'      :   'turkeysandwich',
+        'name'      :   'Turkey Sandwich',
         'price'     :   '$6.55',
         'category'  :   'sandwiches',
         'img'       :   '/imgs/fotos-menu/sandwiches/turkeysandwich.webp',
     },
     {
         'id'        :   'hamsandwich',
-        'name'      :   'hamsandwich',
+        'name'      :   'Ham Sandwich',
         'price'     :   '$5.99',
         'category'  :   'sandwiches',
         'img'       :   '/imgs/fotos-menu/sandwiches/hamsandwich.webp',

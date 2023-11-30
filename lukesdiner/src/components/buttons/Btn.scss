@@ -120,7 +120,6 @@ a {
         }
     }
 }
-
 .btn-xsmall, .linkbtn-xsmall {
     @include var-components(compVar('x-small') compVar('normal'), normal);
     @include mq($bp-large) {

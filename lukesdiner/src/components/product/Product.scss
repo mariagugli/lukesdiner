@@ -4,38 +4,42 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: compVar(medium);
+    gap: compVar(x-small);
     width: min-content;
     @include mq() {
-        gap: compVar(x-normal);
+        gap: compVar(x-medium);
     }
     @include mq($bp-large) {
-        gap: compVar(xxx-normal);
+        gap: compVar(medium);
     }
 }
 .img__product {
-    width: 16.5rem;
-    height: 16.5rem;
+    width: 12.5rem;
+    height: 10.5rem;
     border-radius: compVar(normal);
     border: 1px solid $color-primary;
     background-color: $navy__lighter;
-    object-fit: cover;
+    object-fit: contain;
     padding: compVar(medium);
     @include mq() {
-        width: 22rem;
-        height: 22rem;
-        border-width: 2px;
+        width: 15rem;
+        height: 15rem;
+        border-width: 1px;
     }
     @include mq($bp-large) {
-        width: 26.5rem;
-        height: 26.5rem;
+        width: 18rem;
+        height: 18rem;
+        border-width: 1.5px;
     }
 }
 .name__product {
     font-family: 'Vickie';
+    @include mq($bp-large) {
+        font-size: fs(big);
+    }
 }
 .btn-product__size {
-    @include var-components(compVar('small') compVar('xx-normal'), x-small, medium);
+    @include var-components(compVar(xx-medium) compVar(normal), x-small, x-small);
     &:hover {
         box-shadow: 3px 3px 0px 0px;
         border: 1px solid;
@@ -45,16 +49,18 @@
         box-shadow: 4px 4px 0px 0px;
     }
     @include mq() {
-        @include var-components(compVar('xx-medium') compVar('x-big'), x-small, normal);
+        @include var-components(compVar(xx-medium) compVar(x-normal), x-small, small);
+    }
+    @include mq($bp-large) {
+        @include var-components(compVar(xx-medium) compVar(x-normal), x-small, medium);
     }
 }
 .btns__product {
     display: flex;
     align-items: flex-start;
-    gap: compVar(normal);
 }
 .btninfo__product {
-    padding: compVar(xx-medium) 1.35rem;
+    padding: compVar(xx-medium) 1.2rem;
     @include mq() {
         padding: compVar(xx-medium) 1.5rem;
     }
