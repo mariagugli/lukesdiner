@@ -9,7 +9,7 @@ export default function CategoryList(props) {
 
     return <div className={props.className ? `category__list ${props.className}` : 'category__list'}>
         {listado.map(img =>
-            <Link className={props.classlink ? `category__link ${props.classlink}` : 'category__link'} to={ img.id === 'all' ? '/menu/' : '/menu/' + img.id} key={img.id}>
+            <Link className={props.classlink ? `category__link ${props.classlink}` : 'category__link'} to={ img.id === 'all' ? '/menu' : '/menu/' + img.id} key={img.id}>
                 <Category img={img.img} altimg={img.title} name={img.title} />
             </Link>
         )}

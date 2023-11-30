@@ -24,9 +24,9 @@ function App() {
 
   return (
     <>
-      <header>
+      <header className='header__menu'>
         <Topbar 
-          logoClass={location.pathname === '/sponsorship' ? 'logoSymbol__topbar--sponsorship'
+          logoClass={location.pathname === '/sponsorship' ?'logoSymbol__topbar--sponsorship'
           : 'logoSymbol'}
           lineBurgerMenuClass={location.pathname === '/sponsorship' ? 'color-bg-turquoise' : ''}
           handleBtnBurgerMenu={handleShowBurgerMenu}
@@ -47,6 +47,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/aboutus" element={<About />} />
           <Route path="/menu" element={<Menu />} />
+          <Route path="/menu/:categoryId" element={<Menu />} />
           <Route path="/sponsorship" element={<Sponsorship />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/styleguide" element={<Styleguide />} />

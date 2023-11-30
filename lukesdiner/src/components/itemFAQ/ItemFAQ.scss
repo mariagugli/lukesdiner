@@ -1,0 +1,21 @@
+@import '../../scss/global.scss';
+
+.itemFAQ {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: compVar(normal);
+    border: 1px solid $color-primary;
+    background: rgba(218, 234, 252, 0.63);
+    max-width: 30rem;
+    @include var-components(compVar(xx-normal) compVar(normal), normal);
+    @include mq($bp-large) {
+        @include var-components(compVar(xx-normal) compVar(xx-normal) * 2, xx-big);
+    }
+}
+.img__itemFAQ {
+    width: 100%;
+    object-fit: cover;
+    height: auto;
+}

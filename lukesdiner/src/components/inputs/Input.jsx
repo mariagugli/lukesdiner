@@ -12,7 +12,7 @@ export default function Input(props) {
                 `input-${props.type ? props.type : 'primary'} input-${props.size ? props.size : 'default'}`}`}
             >
 
-            <label className={props.labelclass ? `label ${props.labelclass}`: 'label'}>{props.label !== undefined ? props.label : ''}</label>
+            <label className={props.labelclass ? `label ${props.labelclass}`: 'label'} >{props.label !== undefined ? props.label : ''}</label>
             <input 
                 className={`${
                     props.inputtype === 'checkbox' ? 
@@ -26,6 +26,7 @@ export default function Input(props) {
                 name={props.inputName ? props.inputName : ''}
                 onChange={props.onChange}
                 value={props.inputvalue}
+                id={props.idInput}
                 placeholder={props.placeholder !== undefined ? props.placeholder : ''}
                 required
                 >

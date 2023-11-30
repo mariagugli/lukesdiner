@@ -1,1 +1,37 @@
-@import '../../scss/global.scss'
+@import '../../scss/global.scss';
+
+.header__menu {
+    background-color: $gray__light;
+}
+//      SECTIONS        //
+.sectionMenu__pattern {
+    width: 100%;
+}
+.section__menuList {
+    padding-top: 351px;
+    @include mq($bp-large) {
+        padding-top: 447px;
+    }
+}
+.article__menuCategory {
+    display: flex;
+    flex-direction: column;
+    gap: compVar(x-small);
+    width: 100%;
+    background-color: $gray__light;
+}
+.categoryMenu--fixed {
+    position: fixed;
+    width: calc(100% - 4.25rem);
+    @include mq($bp-large) {
+        width: calc(100% - 10.5rem);
+    }
+}
+.name__category {
+    margin: compVar(normal) compVar(xx-normal);
+    padding: compVar(small) 0;
+    border-radius: compVar(x-big);
+    border: 1px solid $color-primary;
+    background-color: $grayblue__lighter;
+    width: calc(100% - compVar(xx-normal) * 2);
+}

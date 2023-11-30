@@ -1,1 +1,49 @@
-@import '../../scss/global.scss'
+@import '../../scss/global.scss';
+
+//      SECTIONS     //
+.sectionContact__pattern {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.sectionForm__contact {
+    gap: compVar(medium);
+}
+
+//      ARTICLE     //
+.article__basicInfo {
+    display: flex;
+    flex-direction: column;
+    @include var-components(compVar(x-small), x-small, medium, calc(100% - compVar(x-small) * 2));
+}
+
+//      DIVS        //
+.basicInfo {
+    display: flex;
+    gap: compVar(x-small);
+}
+
+//      LISTS        //
+.list__itemFAQ {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: compVar(xx-huge);
+}
+
+//      SPECIALS        //
+.contactForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: compVar(small);
+    & .input-default {
+        width: 100%;
+        & .input {
+            width: calc(100% - compVar(xx-normal) * 2);
+        }
+    }
+    @include mq($bp-large) {
+        padding: compVar(x-huge) compVar(x-huge) * 2;
+    }
+}
