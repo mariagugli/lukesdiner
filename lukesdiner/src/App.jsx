@@ -1,4 +1,4 @@
-import { Route, Routes, useLocation, useParams } from 'react-router-dom'
+import { Route, Routes, useLocation } from 'react-router-dom'
 import Home from './views/home/Home'
 import About from './views/about/About'
 import Menu from './views/menu/Menu'
@@ -7,9 +7,8 @@ import Contact from './views/contact/Contact'
 import Styleguide from './styleguide/Styleguide'
 import Topbar from './components/topbar/Topbar'
 import BurgerMenu from './components/burgerMenu/BurgerMenu'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Footer from './components/footer/Footer'
-import { IMGCATEGORIES } from '../public/images-menuCategories'
 
 function App() {
 
@@ -23,7 +22,10 @@ function App() {
     setShowBurgerMenu('display--none');
   }
 
-  const listCategories = IMGCATEGORIES;
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
+
 
   return (
     <>
